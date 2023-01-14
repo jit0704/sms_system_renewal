@@ -11,7 +11,7 @@
     <script src="/v2/_publishing/js/ia.js"></script>
     <style>
       .ia-content-header {
-        background: #0c4670;
+        background: #468bf0;
       }
       .ia-tbl table .col-type {
         width: 100px !important;
@@ -37,13 +37,7 @@
             <div class="ia-in-sec">
               <h1 class="ia-h1">SMS System 리뉴얼 퍼블리싱 현황판</h1>
               <div class="ia-guideLink">
-                <button
-                  type="button"
-                  class="ia-top"
-                  onclick="$(window).scrollTop(0)"
-                >
-                  TOP
-                </button>
+                <button type="button" class="ia-top" onclick="$(window).scrollTop(0)">TOP</button>
                 <!-- <a href="index.html" class="is-current">현황판</a>
               <a href="../_convention/index.html">퍼블리싱가이드</a> -->
               </div>
@@ -71,24 +65,13 @@
                       </div>
                       <div class="ia-box-body">
                         <ul class="ia-desc marginT-0">
+                          <li>유형 표시방법 - FP : Full Popup, MP : Massge Popup, SP : Select Popup, EP : Etc Popup,</li>
+                          <li>1차 진척관리 - 최초 완료표시 기준으로 날짜를 표시하고, 비고란에 전달사항이 있는경우 표시한다.</li>
                           <li>
-                            유형 표시방법 - FP : Full Popup, MP : Massge Popup,
-                            SP : Select Popup, EP : Etc Popup,
+                            2차 결함관리 - 신규/수정/삭제 이슈가 있는 경우 소스코드와 비고란에 동일한 주석문구를 표시한다. (주석표기 예시 - 181130
+                            홍길동 작업내용 수정)
                           </li>
-                          <li>
-                            1차 진척관리 - 최초 완료표시 기준으로 날짜를
-                            표시하고, 비고란에 전달사항이 있는경우 표시한다.
-                          </li>
-                          <li>
-                            2차 결함관리 - 신규/수정/삭제 이슈가 있는 경우
-                            소스코드와 비고란에 동일한 주석문구를 표시한다.
-                            (주석표기 예시 - 181130 홍길동 작업내용 수정)
-                          </li>
-                          <li>
-                            3차 최종완료 - 사이트 오픈후에 전체현황을 엑셀로
-                            백업하여 기록을 남기고 비고란은 삭제한다. (최종완료
-                            초기화 작업)
-                          </li>
+                          <li>3차 최종완료 - 사이트 오픈후에 전체현황을 엑셀로 백업하여 기록을 남기고 비고란은 삭제한다. (최종완료 초기화 작업)</li>
                         </ul>
                       </div>
                     </div>
@@ -99,25 +82,15 @@
             <!-- //Note -->
 
             <!-- list -->
-            <section
-              class="ia-section ia-section-ajax"
-              data-file="ajax_ia_0"
-              data-color="#ff898e"
-            >
+            <section class="ia-section ia-section-ajax" data-file="ajax_ia_0" data-color="#ff898e">
               <div class="ia-section-header">
                 <h2 class="ia-h2">
                   <a href="#this" class="ui-accordion-toggle">공통 목록</a>
                 </h2>
                 <div class="ia-legend">
-                  <span class="item"
-                    ><em>총 페이지 : </em><em class="legend-total">0</em>,</span
-                  >
-                  <span class="item c-done"
-                    ><em>완료 : </em><em class="legend-complete">0</em>,</span
-                  >
-                  <span class="item"
-                    ><em>진척률 : </em><em class="legend-process">0</em></span
-                  >
+                  <span class="item"><em>총 페이지 : </em><em class="legend-total">0</em>,</span>
+                  <span class="item c-done"><em>완료 : </em><em class="legend-complete">0</em>,</span>
+                  <span class="item"><em>진척률 : </em><em class="legend-process">0</em></span>
                 </div>
               </div>
               <div class="ia-section-body">
@@ -158,7 +131,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type="모달 팝업"></td>
-                          <td class="col-url">html/common/popup.html</td>
+                          <td class="col-url">v2/popup.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -172,21 +145,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">html/common/error.html</td>
-                          <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
-                          <!-- <td class="col-worker"></td> -->
-                          <td class="col-memo"></td>
-                        </tr>
-                        <tr>
-                          <td class="col-num"><!--자동입력--></td>
-                          <td class="col-1depth">아이콘 모음</td>
-                          <td class="col-2depth"></td>
-                          <td class="col-3depth"></td>
-                          <td class="col-4depth"></td>
-                          <td class="col-5depth"></td>
-                          <td class="col-type" data-type=""></td>
-                          <td class="col-url">html/common/icon.html</td>
+                          <td class="col-url">v2/error.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -201,25 +160,15 @@
             <!-- //list -->
 
             <!-- list -->
-            <section
-              class="ia-section ia-section-ajax"
-              data-file="ajax_ia_0"
-              data-color="#ff898e"
-            >
+            <section class="ia-section ia-section-ajax" data-file="ajax_ia_0" data-color="#ff898e">
               <div class="ia-section-header">
                 <h2 class="ia-h2">
                   <a href="#this" class="ui-accordion-toggle">페이지</a>
                 </h2>
                 <div class="ia-legend">
-                  <span class="item"
-                    ><em>총 페이지 : </em><em class="legend-total">0</em>,</span
-                  >
-                  <span class="item c-done"
-                    ><em>완료 : </em><em class="legend-complete">0</em>,</span
-                  >
-                  <span class="item"
-                    ><em>진척률 : </em><em class="legend-process">0</em></span
-                  >
+                  <span class="item"><em>총 페이지 : </em><em class="legend-total">0</em>,</span>
+                  <span class="item c-done"><em>완료 : </em><em class="legend-complete">0</em>,</span>
+                  <span class="item"><em>진척률 : </em><em class="legend-process">0</em></span>
                 </div>
               </div>
               <div class="ia-section-body">
@@ -260,9 +209,9 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">main.html</td>
+                          <td class="col-url">v2/main.html</td>
                           <!-- <td class="col-date"></td> -->
-                          <td class="col-complete" data-complete=""></td>
+                          <td class="col-complete" data-complete="완료"></td>
                           <!-- <td class="col-worker"></td> -->
                           <td class="col-memo"></td>
                         </tr>
@@ -274,7 +223,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type="">모달 팝업</td>
-                          <td class="col-url">main_pop.html</td>
+                          <td class="col-url">v2/main_pop.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -288,7 +237,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">sms_txt.html</td>
+                          <td class="col-url">v2/sms_txt.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -302,7 +251,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type="">모달 팝업</td>
-                          <td class="col-url">sms_txt_addressbook.html</td>
+                          <td class="col-url">v2/sms_txt_addressbook.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -316,7 +265,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">sms_img.html</td>
+                          <td class="col-url">v2/sms_img.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -330,7 +279,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">address_book.html</td>
+                          <td class="col-url">v2/address_book.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -344,7 +293,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type="">모달 팝업</td>
-                          <td class="col-url">address_add.html</td>
+                          <td class="col-url">v2/address_add.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -358,7 +307,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">donot_call.html</td>
+                          <td class="col-url">v2/donot_call.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -372,7 +321,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">donot_call080.html</td>
+                          <td class="col-url">v2/donot_call080.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -386,7 +335,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">send_result.html</td>
+                          <td class="col-url">v2/send_result.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -400,7 +349,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">send_reservation.html</td>
+                          <td class="col-url">v2/send_reservation.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -414,7 +363,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">send_stats.html</td>
+                          <td class="col-url">v2/send_stats.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -428,7 +377,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">sms_unit.html</td>
+                          <td class="col-url">v2/sms_unit.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -442,7 +391,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">charge_list.html</td>
+                          <td class="col-url">v2/charge_list.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
@@ -456,7 +405,7 @@
                           <td class="col-4depth"></td>
                           <td class="col-5depth"></td>
                           <td class="col-type" data-type=""></td>
-                          <td class="col-url">send_list.html</td>
+                          <td class="col-url">v2/send_list.html</td>
                           <!-- <td class="col-date"></td> -->
                           <td class="col-complete" data-complete=""></td>
                           <!-- <td class="col-worker"></td> -->
