@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>팝업 가이드</title>
+    <script type="text/javascript" src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="/v2/assets/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/v2/assets/js/lib/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="/v2/assets/js/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="/v2/assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/v2/assets/css/style.css" />
+    <style>
+      pre {
+        margin: 0;
+        background: #fafafa;
+      }
+
+      h1 {
+        padding: 20px;
+        color: #000;
+        border-bottom: 1px solid #ced4da;
+      }
+      .bind {
+        padding: 0 20px 20px;
+      }
+      .ex-btn {
+        display: block;
+        width: 180px;
+        margin-left: 15px;
+        line-height: 38px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        background: #007bff;
+        border-radius: 5px;
+        font-weight: 400;
+      }
+      .code-view dt {
+        padding: 15px 0 15px 35px;
+        font-size: 20px;
+        color: #333;
+      }
+      .code-view dd {
+        margin: 0 35px 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-weight: 400;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+      }
+      .code-view dd ol {
+        list-style-type: decimal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <p style="padding: 20px; font-size: 30px; font-weight: 300; text-align: center">
+        해당 모달의 API기능은
+        <a href="https://jquerymodal.com/" target="_blank" title="새창열림" style="color: #468bf0; text-decoration: underline">jquerymodal.com</a> 을
+        참고하시면 됩니다.
+      </p>
+    </header>
+
+    <h1>디자인 Alert 팝업 예제</h1>
+    <dl class="code-view">
+      <dt>Code Preview</dt>
+      <dd>
+        <pre>
+          <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">id</span>=<span style="color:#52be14">"ex1"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-alert"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-content"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"txt"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>해당&nbsp;요청사항이&nbsp;처리되었습니다.<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">p</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-content&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-btn-group"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#0099cc">href</span>=<span style="color:#52be14">"#"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">rel</span>=<span style="color:#52be14">"modal:close"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"btn-primary"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>확인<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">a</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">span</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-btn-group&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-alert&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--&nbsp;//modal&nbsp;--&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </pre>
+      </dd>
+    </dl>
+    <div class="bind">
+      <p><a href="#ex1" class="btn-modal-open ex-btn">시스템 alert 팝업</a></p>
+    </div>
+
+    <div id="ex1" class="modal">
+      <div class="modal-alert">
+        <div class="modal-content">
+          <p class="txt">해당 요청사항이 처리되었습니다.</p>
+        </div>
+        <!-- //modal-content -->
+        <span class="modal-btn-group">
+          <a href="#" rel="modal:close" class="btn-primary">확인</a>
+        </span>
+        <!-- //modal-btn-group -->
+      </div>
+      <!-- //modal-alert -->
+    </div>
+    <!-- //modal -->
+
+    <h1>디자인 confirm 팝업 예제</h1>
+    <dl class="code-view">
+      <dt>Code Preview</dt>
+      <dd>
+        <pre>
+          <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">id</span>=<span style="color:#52be14">"ex2"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-confirm"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-content"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">p</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"txt"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>해당&nbsp;요청사항을&nbsp;취소하시겠습니까?<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">p</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-content&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-btn-group"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#0099cc">href</span>=<span style="color:#52be14">"#"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">rel</span>=<span style="color:#52be14">"modal:close"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"btn-secondary"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>닫기<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">a</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#0099cc">href</span>=<span style="color:#52be14">"#"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">rel</span>=<span style="color:#52be14">"modal:close"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"btn-primary"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>확인<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">a</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">span</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-btn-group&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-confirm&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--&nbsp;//modal&nbsp;--&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </pre>
+      </dd>
+    </dl>
+    <div class="bind">
+      <p><a href="#ex2" class="btn-modal-open ex-btn">시스템 confirm 팝업</a></p>
+    </div>
+
+    <div id="ex2" class="modal">
+      <div class="modal-confirm">
+        <div class="modal-content">
+          <p class="txt">해당 요청사항을 취소하시겠습니까?</p>
+        </div>
+        <!-- //modal-content -->
+        <span class="modal-btn-group">
+          <a href="#" rel="modal:close" class="btn-secondary">닫기</a>
+          <a href="#" rel="modal:close" class="btn-primary">확인</a>
+        </span>
+        <!-- //modal-btn-group -->
+      </div>
+      <!-- //modal-confirm -->
+    </div>
+    <!-- //modal -->
+
+    <h1>공통 모달 팝업 예제</h1>
+    <dl class="code-view">
+      <dt>Code Preview</dt>
+      <dd>
+        <pre>
+          <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #e5e5e5"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#666;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div><div style="line-height:130%">20</div><div style="line-height:130%">21</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">id</span>=<span style="color:#52be14">"ex3"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-primary"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-header"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"tit"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>팝업&nbsp;타이틀<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">span</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-content"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팝업&nbsp;컨텐츠<span style="color:#010101">&lt;</span><span style="color:#ff3399">br</span>&nbsp;<span style="color:#0099cc">/</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팝업&nbsp;컨텐츠<span style="color:#010101">&lt;</span><span style="color:#ff3399">br</span>&nbsp;<span style="color:#0099cc">/</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팝업&nbsp;컨텐츠<span style="color:#010101">&lt;</span><span style="color:#ff3399">br</span>&nbsp;<span style="color:#0099cc">/</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팝업&nbsp;컨텐츠</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-content&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"modal-btn-group"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#0099cc">href</span>=<span style="color:#52be14">"#"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">rel</span>=<span style="color:#52be14">"modal:close"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"btn-secondary"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>secondary&nbsp;버튼<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">a</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#ff3399">a</span>&nbsp;<span style="color:#0099cc">href</span>=<span style="color:#52be14">"#"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">rel</span>=<span style="color:#52be14">"modal:close"</span><span style="color:#0099cc"></span>&nbsp;<span style="color:#0099cc">class</span>=<span style="color:#52be14">"btn-primary"</span><span style="color:#0099cc"></span><span style="color:#010101">&gt;</span>primary&nbsp;버튼<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">a</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//modal-btn-group&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#999999">&lt;!--&nbsp;//management&nbsp;--&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#010101">&lt;</span><span style="color:#010101">/</span><span style="color:#ff3399">div</span><span style="color:#010101">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">&lt;!--&nbsp;//modal&nbsp;--&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"><a href="http://colorscripter.com/info#e" target="_blank" style="color:#e5e5e5;text-decoration:none">Colored by Color Scripter</a></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
+        </pre>
+      </dd>
+    </dl>
+    <div class="bind">
+      <p><a href="#ex3" class="btn-modal-open ex-btn">공통 모달 팝업</a></p>
+    </div>
+
+    <div id="ex3" class="modal">
+      <div class="modal-primary">
+        <div class="modal-header">
+          <span class="tit">팝업 타이틀</span>
+        </div>
+        <div class="modal-content">
+          팝업 컨텐츠<br />
+          팝업 컨텐츠<br />
+          팝업 컨텐츠<br />
+          팝업 컨텐츠
+        </div>
+        <!-- //modal-content -->
+        <div class="modal-btn-group">
+          <a href="#" rel="modal:close" class="btn-secondary">secondary 버튼</a>
+          <a href="#" rel="modal:close" class="btn-primary">primary 버튼</a>
+        </div>
+        <!-- //modal-btn-group -->
+      </div>
+      <!-- //management -->
+    </div>
+    <!-- //modal -->
+  </body>
+</html>

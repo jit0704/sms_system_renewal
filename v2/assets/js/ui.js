@@ -7,6 +7,7 @@ $(function () {
 
   // ui 인터렉션 호출
   cmmnUi.init();
+  cmmnUi.modal();
 });
 
 const cmmnUi = {
@@ -23,5 +24,15 @@ const cmmnUi = {
         gnbBg.slideUp(200);
       });
     }, 100);
+  },
+  modal() {
+    $('.btn-modal-open').on('click', function () {
+      $(this).modal({
+        closeExisting: false,
+        clickClose: false,
+        fadeDuration: 100,
+      });
+      return false;
+    });
   },
 };
