@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>메인 팝업</title>
+    <link rel="stylesheet" href="/v2/assets/css/style.css" />
+    <script defer src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script defer src="/v2/assets/js/lib/jquery.modal.min.js"></script>
+    <script defer src="/v2/assets/js/lib/includeHTML.js"></script>
+    <script defer src="/v2/assets/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p><a href="#ex1" class="btn-modal-open">메인 팝업 호출</a></p>
+
+      <div id="ex1" class="modal">
+        <div class="modal-primary main">
+          <div class="modal-header">
+            <span class="tit">팝업 타이틀</span>
+          </div>
+          <div class="modal-content">
+            팝업 컨텐츠<br />
+            팝업 컨텐츠<br />
+            팝업 컨텐츠<br />
+            팝업 컨텐츠
+          </div>
+          <!-- //modal-content -->
+          <div class="modal-btn-group">
+            <a href="#" rel="modal:close" class="btn-secondary">오늘 하루 그만보기</a>
+            <a href="#" rel="modal:close" class="btn-primary">닫기</a>
+          </div>
+          <!-- //modal-btn-group -->
+        </div>
+        <!-- //management -->
+      </div>
+      <!-- //modal -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 퍼블리싱 확인용
+      setTimeout(() => {
+        $('.btn-modal-open').trigger('click');
+      }, 100);
+    </script>
+  </body>
+</html>

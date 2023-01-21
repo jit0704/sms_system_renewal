@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>단문 장문</title>
+    <link rel="stylesheet" href="/v2/assets/css/style.css" />
+    <script defer src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script defer src="/v2/assets/js/lib/includeHTML.js"></script>
+    <script defer src="/v2/assets/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sub">
+        <nav class="navigation" include-html="/v2/include/navigation.html"></nav>
+
+        <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside>
+
+        <main class="sub-container type2">
+          <div class="sms-txt-container">
+            <h3 class="sub-tit">단문*장문</h3>
+            <section class="sms-txt-content">
+              <article class="sms-txt-viwer">
+                <div class="sms-txt-viwer-header">
+                  <em>단문</em>
+                  <span><em>26</em> / 90 byte</span>
+                </div>
+                <!-- //sms-txt-viwer-header -->
+                <div class="sms-txt-input">
+                  <textarea>(광고)</textarea>
+                  <div class="refer">
+                    <em class="refer1">90 byte (한글 45자) 초과시, 자동 장문 전환</em>
+                    <em class="refer2">무료거부 0808870505</em>
+                  </div>
+                  <!-- //refer -->
+                  <div class="btn-group-function">
+                    <button type="button">특수문자 입력</button>
+                    <button type="button">080 수신거부</button>
+                    <button type="button">메세지 보관함</button>
+                    <button type="button">문자내용 저장</button>
+                  </div>
+                  <!-- //btn-group-function -->
+                </div>
+                <!-- //sms-txt-input -->
+              </article>
+              <!-- //sms-txt-viwer -->
+
+              <article class="sms-txt-write">
+                <div class="user-form">
+                  <em>제목</em>
+                  <input type="text" placeholder="제목입력 (최대 30 byte, 발송관리용)" class="input-default" />
+                </div>
+                <!-- //user-form -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form type2">
+                  <em>받는사람</em>
+                  <span class="bind">
+                    <input type="text" placeholder="휴대폰번호 입력" class="input-default" />
+                    <button type="button" class="btn-secondary">추가</button>
+                  </span>
+                </div>
+                <!-- //user-form -->
+                <div class="list-number">
+                  <div class="list-number-header">
+                    <span class="sum">총 <em>10</em>명</span>
+                    <span class="bind">
+                      <a href="#" class="btn-bordered sm gray">주소록 불러오기</a>
+                      <a href="#" class="btn-bordered sm gray">파일 붙여넣기</a>
+                      <a href="#" class="btn-bordered sm gray">엑셀 붙여넣기</a>
+                    </span>
+                  </div>
+                  <!-- //list-number-header -->
+                  <ul>
+                    <li>010-0000-0000</li>
+                    <li>010-0000-0000</li>
+                    <li>010-0000-0000</li>
+                    <li>010-0000-0000</li>
+                    <li>010-0000-0000</li>
+                  </ul>
+                </div>
+                <!-- //list-number -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form-choice">
+                  <em class="tit">분할전송</em>
+                  <label class="radio-chk-display">
+                    <input type="radio" name="divide" data-ui="divide-unused" />
+                    <span class="txt">미사용</span>
+                  </label>
+                  <div class="bind">
+                    <label class="radio-chk-display">
+                      <input type="radio" name="divide" data-ui="divide-used" />
+                      <span class="txt">사용</span>
+                    </label>
+                    <input type="number" class="input-default txt-center" style="width: 90px" />
+                    <span class="space">건씩</span>
+                    <input type="number" class="input-default txt-center" style="width: 90px" />
+                    <span class="space">분 간격</span>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //user-form-choice -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form-choice">
+                  <em class="tit">전송시간</em>
+                  <label class="radio-chk-display">
+                    <input type="radio" name="time" data-ui="time-used" />
+                    <span class="txt">즉시</span>
+                  </label>
+                  <div class="bind">
+                    <label class="radio-chk-display">
+                      <input type="radio" name="time" data-ui="time-unused" />
+                      <span class="txt">예약</span>
+                    </label>
+                    <input type="date" class="input-default date" style="width: 146px" />
+                    <input type="number" class="input-default txt-center" style="width: 60px" />
+                    <span class="space">시</span>
+                    <input type="number" class="input-default txt-center" style="width: 60px" />
+                    <span class="space">분</span>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //user-form-choice -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form">
+                  <em>발신번호</em>
+                  <span class="select-default">
+                    <select>
+                      <option>010-0000-0000 [기본 발신번호]</option>
+                      <option>010-0000-0000</option>
+                    </select>
+                  </span>
+                </div>
+                <!-- //user-form -->
+              </article>
+              <!-- //sms-txt-write -->
+            </section>
+            <!-- //sms-txt-content -->
+
+            <section class="understand-box">
+              <em>알아두세요</em>
+              <p>
+                수신번호 추가 시 중복번호, 형식에 맞지 않는 번호는 자동 제거됩니다.<br />
+                080 수신거부 기본, itku 블랙리스트 (선택: 정통부 신고번호 고객센터 문의) 자동 거부됩니다.
+              </p>
+            </section>
+            <!-- //understand-box -->
+
+            <div class="btn-group space-between">
+              <span class="bind">
+                <button type="button" class="btn-secondary">단축 URL 변환</button>
+                <button type="button" class="btn-secondary">발송가능건수 확인</button>
+              </span>
+              <span class="bind">
+                <button type="button" class="btn-secondary">3사 테스트 전송</button>
+                <button type="button" class="btn-primary">전송하기</button>
+              </span>
+            </div>
+            <!-- //btn-group -->
+          </div>
+          <!-- //sms-txt-container -->
+        </main>
+        <!-- //sub-container -->
+
+        <footer include-html="/v2/include/footer.html"></footer>
+      </div>
+      <!-- //sub -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>

@@ -23,7 +23,6 @@ td,
 form,
 fieldset,
 legend,
-textarea,
 input,
 select,
 textarea,
@@ -78,7 +77,33 @@ button {
   font-size: 16px;
 }
 
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* input type number 우측 화살표 제거 */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* input type date 달력 아이콘 제거 */
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  opacity: 0;
+}
+
 select {
+  width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -244,10 +269,53 @@ figcaption {
   letter-spacing: -2px !important;
 }
 
+.txt-center {
+  text-align: center !important;
+}
+
 /* ###############################
     공통 컴포넌트 모음
 ################################## */
 /* 버튼 */
+.btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.btn-group.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-group .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 10px;
+}
+
 .btn-primary {
   min-width: 118px;
   line-height: 46px;
@@ -261,7 +329,7 @@ figcaption {
 
 .btn-secondary {
   min-width: 118px;
-  line-height: 46px;
+  line-height: 44px;
   padding: 0 20px;
   border-radius: 5px;
   border: 1px solid #468bf0;
@@ -269,6 +337,21 @@ figcaption {
   font-size: 16px;
   font-weight: 700;
   color: #468bf0;
+}
+
+.btn-bordered {
+  border: 1px solid #bbb;
+}
+
+.btn-bordered.sm {
+  padding: 0 15px;
+  line-height: 34px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn-bordered.gray {
+  color: #8d8d8d;
 }
 
 /* 텍스트 */
@@ -288,11 +371,242 @@ figcaption {
   font-size: 40px;
 }
 
+/* 리스트 */
+.list-number {
+  height: 202px;
+  padding: 10px 7px 10px 15px;
+  border-radius: 5px;
+  background: #f6f5f3;
+}
+
+.list-number-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-number-header .sum {
+  line-height: 16px;
+  font-size: 14px;
+  color: #6e6e6e;
+}
+
+.list-number-header .sum em {
+  color: #468bf0;
+}
+
+.list-number > ul {
+  overflow-y: overlay;
+  height: 133px;
+  margin-top: 12px;
+}
+
+/* input */
+.input-default {
+  width: 100%;
+  height: 46px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.input-default::-webkit-input-placeholder {
+  color: #8d8d8d;
+}
+
+.input-default:-ms-input-placeholder {
+  color: #8d8d8d;
+}
+
+.input-default::-ms-input-placeholder {
+  color: #8d8d8d;
+}
+
+.input-default::placeholder {
+  color: #8d8d8d;
+}
+
+.input-default.date {
+  padding: 12px 10px;
+  background: url("../images/icon_calender.png") no-repeat 92% 13px;
+  background-size: 20px;
+}
+
+/* 라디오버튼 */
+.radio-chk-display {
+  position: relative;
+}
+
+.radio-chk-display input {
+  position: absolute;
+}
+
+.radio-chk-display input:checked + .txt {
+  border-color: #468bf0;
+  color: #1a1a1a;
+}
+
+.radio-chk-display input:checked + .txt::before {
+  background: url("../images/icon_chk_blue.png") no-repeat 0 0;
+  background-size: contain;
+}
+
+.radio-chk-display .txt {
+  min-width: 123px;
+  line-height: 46px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  text-align: center;
+  color: #8d8d8d;
+}
+
+.radio-chk-display .txt::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  margin-right: 10px;
+  background: url("../images/icon_chk_gray.png") no-repeat 0 0;
+  background-size: contain;
+}
+
+/* 셀렉트 박스 */
+.select-default {
+  display: block;
+  border: 1px solid #cccfd9;
+  border-radius: 5px;
+}
+
+.select-default select {
+  height: 46px;
+  padding-left: 15px;
+  padding-right: 40px;
+  background: url("../images/icon_arr_down.png") no-repeat 98% 50%;
+  background-size: 21px;
+}
+
 /* 라인 */
 .line {
   width: 100%;
   height: 6px;
   background: #f1f2f4;
+}
+
+.line-thin {
+  width: 100%;
+  height: 1px;
+  background: #eaebee;
+}
+
+/* 안내 가이드 */
+.understand-box {
+  width: 1200px;
+  margin-left: auto;
+  padding: 15px 15px 18px;
+  background: #f6f5f3;
+  border-radius: 5px;
+}
+
+.understand-box > em {
+  font-size: 14px;
+  color: #e63312;
+}
+
+.understand-box > em::before {
+  content: '!';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  margin-right: 7px;
+  border-radius: 100%;
+  background: #e63312;
+  color: #fff;
+  text-align: center;
+}
+
+.understand-box > p {
+  padding: 7px 0 0 30px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #8d8d8d;
+}
+
+/* form components */
+.user-form > em {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-form.type2 .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 7px;
+}
+
+.user-form.type2 .bind .input-default {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.user-form.type2 .bind .btn-secondary {
+  min-width: auto;
+}
+
+.user-form-choice .tit {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-form-choice .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 7px;
+  margin-top: 7px;
+}
+
+.user-form-choice .bind .radio-chk-display.disabled ~ .input-default,
+.user-form-choice .bind .radio-chk-display.disabled ~ .space {
+  opacity: 0.3;
 }
 
 /* ###############################
@@ -311,8 +625,7 @@ figcaption {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
@@ -444,7 +757,7 @@ figcaption {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 50px 0 40px;
+  padding: 50px 0 40px;
   text-align: center;
 }
 
@@ -473,11 +786,19 @@ figcaption {
 
 .modal-primary {
   width: 986px;
+  height: 706px;
   padding: 35px 45px 0;
 }
 
+.modal-primary .modal-header .tit {
+  line-height: 33px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
 .modal-primary .modal-btn-group {
-  margin: 25px 0 19px;
+  padding: 25px 0 19px;
 }
 
 /* ###############################
@@ -485,6 +806,24 @@ figcaption {
 ################################## */
 .wrapper {
   min-width: 1200px;
+}
+
+.sub {
+  min-width: 1200px;
+}
+
+.sub-tit {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sub-container {
+  width: 1200px;
+  margin: 95px auto 0;
+}
+
+.sub-container.type2 {
+  width: 1253px;
 }
 
 /* 네비게이션 */
@@ -827,6 +1166,9 @@ footer {
   border-radius: 10px;
   background: #fff;
   text-align: center;
+  border: 1px solid #cccfd9;
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
 .quick-menu h2 {
@@ -1299,6 +1641,184 @@ footer {
   border-radius: 10px;
 }
 
+.modal-primary.main .modal-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #979797;
+}
+
+.modal-primary.main .modal-content {
+  overflow-y: overlay;
+  height: calc(100% - 169px);
+  margin-top: 25px;
+}
+
 /* ###############################
     서브페이지
 ################################## */
+/* 단/장문 */
+.sms-txt-container .sub-tit {
+  margin-left: 29px;
+}
+
+.sms-txt-container .understand-box {
+  margin-bottom: 20px;
+}
+
+.sms-txt-container .btn-group {
+  width: 1200px;
+  margin: 0 0 80px auto;
+}
+
+.sms-txt-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.sms-txt-viwer {
+  width: 795px;
+  height: 931px;
+  margin-top: 33px;
+  background: url("../images/phone_visual.png") no-repeat 0 0;
+  background-size: contain;
+}
+
+.sms-txt-viwer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 304px;
+  margin: 76px auto 59px;
+}
+
+.sms-txt-viwer-header > em {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sms-txt-viwer-header > span {
+  font-size: 14px;
+  color: #8d8d8d;
+}
+
+.sms-txt-viwer-header > span em {
+  color: #468bf0;
+}
+
+.sms-txt-input {
+  width: 304px;
+  margin: 0 auto;
+}
+
+.sms-txt-input textarea {
+  height: 398px;
+  padding: 0 15px 15px;
+}
+
+.sms-txt-input .refer {
+  padding: 0 15px 30px;
+}
+
+.sms-txt-input .refer [class*='refer'] {
+  display: block;
+  line-height: 29px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.sms-txt-input .refer .refer1 {
+  border: 1px solid #468bf0;
+  background: #e9f2fe;
+}
+
+.sms-txt-input .refer .refer2 {
+  margin-top: 5px;
+  color: #fff;
+  background: #e63312;
+}
+
+.sms-txt-input .btn-group-function {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px 6px;
+}
+
+.sms-txt-input .btn-group-function button {
+  height: 33px;
+  -ms-flex-preferred-size: calc(50% - 3px);
+      flex-basis: calc(50% - 3px);
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+  background: #98999a;
+}
+
+.sms-txt-write {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 15px;
+}
+
+.sms-txt-write .line-thin {
+  margin: 24.5px 0;
+}
+
+.sms-txt-write .list-number {
+  margin-top: 10px;
+}
+
+.sms-txt-write .list-number-header .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 5px;
+}
+
+.sms-txt-write .list-number-header .btn-bordered.sm {
+  padding: 0 8px;
+}
