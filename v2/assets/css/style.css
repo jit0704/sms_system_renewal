@@ -82,10 +82,11 @@ textarea {
   resize: none;
 }
 
-input[type='radio'] {
+input[type='radio'], input[type='checkbox'] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  position: absolute;
 }
 
 /* input type number 우측 화살표 제거 */
@@ -317,6 +318,7 @@ figcaption {
 }
 
 .btn-primary {
+  display: block;
   min-width: 118px;
   line-height: 46px;
   padding: 0 20px;
@@ -325,9 +327,20 @@ figcaption {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
+  text-align: center;
+}
+
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #cccfd9;
+  background: #f1f2f4;
+}
+
+.btn-primary.lg {
+  line-height: 52px;
 }
 
 .btn-secondary {
+  display: block;
   min-width: 118px;
   line-height: 44px;
   padding: 0 20px;
@@ -337,6 +350,7 @@ figcaption {
   font-size: 16px;
   font-weight: 700;
   color: #468bf0;
+  text-align: center;
 }
 
 .btn-bordered {
@@ -444,13 +458,28 @@ figcaption {
   background-size: 20px;
 }
 
+/* 체크박스 */
+.chkbox-rounded {
+  position: relative;
+  font-size: 0;
+}
+
+.chkbox-rounded .txt {
+  width: 23px;
+  height: 23px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.chkbox-rounded.c-lightblue input:checked + .txt {
+  border-color: #468bf0;
+  background: url("../images/icon_chk_blue2.png") no-repeat 50% 50%;
+  background-size: 16px;
+}
+
 /* 라디오버튼 */
 .radio-chk-display {
   position: relative;
-}
-
-.radio-chk-display input {
-  position: absolute;
 }
 
 .radio-chk-display input:checked + .txt {
@@ -544,6 +573,53 @@ figcaption {
   color: #8d8d8d;
 }
 
+/* 테이블 */
+.table-primary {
+  overflow-y: overlay;
+  border-top: 1px solid #6e6e6e;
+  border-bottom: 1px solid #6e6e6e;
+}
+
+.table-primary table.data-none {
+  height: 100%;
+}
+
+.table-primary table.data-none td {
+  border-bottom: 0;
+  color: #8d8d8d;
+}
+
+.table-primary th,
+.table-primary td {
+  padding: 14px 5px;
+  text-align: center;
+  border-bottom: 1px solid #cccfd9;
+  border-left: 1px solid #cccfd9;
+}
+
+.table-primary th:first-child,
+.table-primary td:first-child {
+  border-left: 0;
+}
+
+.table-primary th .chkbox-rounded,
+.table-primary td .chkbox-rounded {
+  vertical-align: middle;
+}
+
+.table-primary thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-primary thead th {
+  color: #727e8b;
+  font-weight: 700;
+  background: #f7f9ff;
+}
+
 /* form components */
 .user-form > em {
   display: block;
@@ -607,6 +683,32 @@ figcaption {
 .user-form-choice .bind .radio-chk-display.disabled ~ .input-default,
 .user-form-choice .bind .radio-chk-display.disabled ~ .space {
   opacity: 0.3;
+}
+
+/* 검색 */
+.search-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 7px;
+}
+
+.search-group .input-default {
+  width: 269px;
+}
+
+.search-group .btn-secondary {
+  min-width: auto;
 }
 
 /* ###############################
@@ -790,11 +892,40 @@ figcaption {
   padding: 35px 45px 0;
 }
 
+.modal-primary.pt-modification {
+  padding-top: 28px;
+}
+
+.modal-primary.pt-modification .modal-content {
+  height: 532px;
+}
+
+.modal-primary.pt-modification .modal-content .table-primary {
+  height: 100%;
+}
+
 .modal-primary .modal-header .tit {
   line-height: 33px;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 500;
   color: #1a1a1a;
+}
+
+.modal-primary .modal-header .bind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 11px;
 }
 
 .modal-primary .modal-btn-group {
@@ -885,6 +1016,10 @@ figcaption {
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
+}
+
+.navigation .bind-right.type2 > a:first-child::before {
+  display: none;
 }
 
 .navigation .bind-right > a {
@@ -1655,6 +1790,85 @@ footer {
 /* ###############################
     서브페이지
 ################################## */
+/* 로그인 */
+.login .navigation {
+  position: relative;
+  z-index: 1;
+}
+
+.login .key-visual {
+  background: #000;
+}
+
+.login .key-visual-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 162px;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 719px;
+  background: url("../images/main_key_visual.png") no-repeat 50% 100%;
+  background-size: cover;
+}
+
+.login .key-visual-inner > .bind {
+  width: 571px;
+  margin-top: -150px;
+}
+
+.login .key-visual-inner > .bind em {
+  display: block;
+}
+
+.login .key-visual-inner > .bind em img {
+  width: 100%;
+}
+
+.login .key-visual-inner > .bind p {
+  padding: 20px 0 0 22px;
+  line-height: 1.4;
+  font-size: 25px;
+  color: #fff;
+}
+
+.login .key-visual-inner .login-container {
+  width: 527px;
+  padding: 38px 35px 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.login .key-visual-inner .login-container h2 {
+  line-height: 31px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.login .key-visual-inner .login-container .user-form {
+  margin-top: 30px;
+}
+
+.login .key-visual-inner .login-container > .btn-primary {
+  margin: 45px 0 47px;
+}
+
+.login .key-visual-inner .login-container .btn-group a {
+  color: #1a1a1a;
+}
+
 /* 단/장문 */
 .sms-txt-container .sub-tit {
   margin-left: 29px;
