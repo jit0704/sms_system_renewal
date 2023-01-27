@@ -977,6 +977,15 @@ figcaption {
   padding: 24px 0 20px;
 }
 
+.navigation.type2 {
+  position: relative;
+  z-index: 1;
+}
+
+.navigation.type2 .bind-right > a:first-child::before {
+  display: none;
+}
+
 .navigation .bind-left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1016,10 +1025,6 @@ figcaption {
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
-}
-
-.navigation .bind-right.type2 > a:first-child::before {
-  display: none;
 }
 
 .navigation .bind-right > a {
@@ -1408,15 +1413,15 @@ footer {
   text-align: center;
 }
 
-.main .key-visual-inner em {
+.main .key-visual-inner > em {
   margin: 138px 0 28px;
 }
 
-.main .key-visual-inner em img {
+.main .key-visual-inner > em img {
   width: 647px;
 }
 
-.main .key-visual-inner p {
+.main .key-visual-inner > p {
   line-height: 1.4;
   font-size: 25px;
   color: #fff;
@@ -1791,16 +1796,11 @@ footer {
     서브페이지
 ################################## */
 /* 로그인 */
-.login .navigation {
-  position: relative;
-  z-index: 1;
-}
-
-.login .key-visual {
+.login.key-visual {
   background: #000;
 }
 
-.login .key-visual-inner {
+.login.key-visual .key-visual-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1820,29 +1820,30 @@ footer {
   height: 719px;
   background: url("../images/main_key_visual.png") no-repeat 50% 100%;
   background-size: cover;
+  text-align: left;
 }
 
-.login .key-visual-inner > .bind {
+.login.key-visual .key-visual-inner > .bind {
   width: 571px;
   margin-top: -150px;
 }
 
-.login .key-visual-inner > .bind em {
+.login.key-visual .key-visual-inner > .bind em {
   display: block;
 }
 
-.login .key-visual-inner > .bind em img {
+.login.key-visual .key-visual-inner > .bind em img {
   width: 100%;
 }
 
-.login .key-visual-inner > .bind p {
+.login.key-visual .key-visual-inner > .bind p {
   padding: 20px 0 0 22px;
   line-height: 1.4;
   font-size: 25px;
   color: #fff;
 }
 
-.login .key-visual-inner .login-container {
+.login.key-visual .key-visual-inner .login-container {
   width: 527px;
   padding: 38px 35px 50px;
   border-radius: 10px;
@@ -1851,21 +1852,21 @@ footer {
   background: #fff;
 }
 
-.login .key-visual-inner .login-container h2 {
+.login.key-visual .key-visual-inner .login-container h2 {
   line-height: 31px;
   font-size: 25px;
   font-weight: 700;
 }
 
-.login .key-visual-inner .login-container .user-form {
+.login.key-visual .key-visual-inner .login-container .user-form {
   margin-top: 30px;
 }
 
-.login .key-visual-inner .login-container > .btn-primary {
+.login.key-visual .key-visual-inner .login-container > .btn-primary {
   margin: 45px 0 47px;
 }
 
-.login .key-visual-inner .login-container .btn-group a {
+.login.key-visual .key-visual-inner .login-container .btn-group a {
   color: #1a1a1a;
 }
 
