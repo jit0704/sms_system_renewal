@@ -7,22 +7,30 @@ $(function () {
 
   // ui 인터렉션 호출
   cmmnUi.init();
-  cmmnUi.modal();
-  cmmnUi.userForm();
 });
 
 const cmmnUi = {
   init() {
     cmmnUi.gnb();
+    cmmnUi.modal();
+    cmmnUi.userForm();
   },
   gnb() {
     setTimeout(function () {
       var gnbBg = $('.navigation .bg-depth2');
+      var gnbDepth2 = $('.gnb-depth2');
       $(document).on('mouseenter', '.gnb-depth1', function () {
-        $('.navigation .bg-depth2').slideDown(100);
+        gnbBg.slideDown(100);
+        if (!$('.gnb').is('.type2')) {
+          gnbDepth2.removeClass('active');
+          $(this).next('.gnb-depth2').addClass('active');
+        } else {
+          gnbDepth2.addClass('active');
+        }
       });
-      $(document).on('mouseleave', '.gnb', function () {
+      $(document).on('mouseleave', '.navigation', function () {
         gnbBg.slideUp(200);
+        gnbDepth2.removeClass('active');
       });
     }, 100);
   },
@@ -55,5 +63,12 @@ const cmmnUi = {
         $anotherEl.parent('.disabled').siblings('input').attr('disabled', true);
       }
     }
+
+    // 약관 링크 텍스트 활성화
+    $('.term-list input').on('change', function () {
+      var isChk = $(this).is(':checked');
+      var linkTxt = $(this).parent().next();
+      isChk ? linkTxt.addClass('active') : linkTxt.removeClass('active');
+    });
   },
 };
