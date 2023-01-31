@@ -2068,6 +2068,22 @@ footer {
   margin: 0 0 80px auto;
 }
 
+.sms-txt-container .btn-spchar::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  margin-bottom: -3px;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-left: 7px solid #fff;
+  border-right: 7px solid transparent;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .sms-txt-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2125,6 +2141,7 @@ footer {
 }
 
 .sms-txt-input {
+  position: relative;
   width: 304px;
   margin: 0 auto;
 }
@@ -2184,6 +2201,18 @@ footer {
   border-radius: 5px;
   color: #fff;
   background: #98999a;
+}
+
+.sms-txt-input .special-character {
+  display: none;
+  position: absolute;
+  top: 533px;
+  left: 0;
+  width: 304px;
+}
+
+.sms-txt-input .special-character.active {
+  display: block;
 }
 
 .sms-txt-write {
