@@ -16,7 +16,7 @@
       <div class="sub">
         <nav class="navigation" include-html="/v2/include/navigation.html"></nav>
 
-        <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside>
+        <!-- <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside> -->
 
         <main class="sub-container type2">
           <div class="sms-txt-container">
@@ -145,13 +145,45 @@
                     </span>
                   </div>
                   <!-- //list-number-header -->
+                  <!-- 230202 선택 체크박스 및 삭제 버튼 추가 -->
                   <ul>
-                    <li>010-0000-0000</li>
-                    <li>010-0000-0000</li>
-                    <li>010-0000-0000</li>
-                    <li>010-0000-0000</li>
-                    <li>010-0000-0000</li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
                   </ul>
+                  <button type="button" class="btn-bordered sm red">삭제</button>
                 </div>
                 <!-- //list-number -->
 
@@ -191,9 +223,22 @@
                       <span class="txt">예약</span>
                     </label>
                     <input type="date" class="input-default date" style="width: 146px" />
-                    <input type="number" class="input-default txt-center" style="width: 60px" />
+                    <!-- 230202 셀렉트 박스로 변경 -->
+                    <span class="select-default" style="width: 90px">
+                      <select>
+                        <option>오전9</option>
+                        <option>오전10</option>
+                        <option>오전11</option>
+                      </select>
+                    </span>
                     <span class="space">시</span>
-                    <input type="number" class="input-default txt-center" style="width: 60px" />
+                    <span class="select-default" style="width: 59px">
+                      <select>
+                        <option>00</option>
+                        <option>10</option>
+                        <option>20</option>
+                      </select>
+                    </span>
                     <span class="space">분</span>
                   </div>
                   <!-- //bind -->

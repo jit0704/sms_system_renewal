@@ -59,8 +59,10 @@ const cmmnUi = {
       if ($targetEl.is(':checked')) {
         $targetEl.prop('checked', true).parent().removeClass('disabled');
         $targetEl.parent().siblings('input').attr('disabled', false);
+        $targetEl.closest('.bind').find('select').attr('disabled', false);
         $anotherEl.prop('checked', false).parent().addClass('disabled');
         $anotherEl.parent('.disabled').siblings('input').attr('disabled', true);
+        $anotherEl.closest('.bind').find('select').attr('disabled', true);
       }
     }
 

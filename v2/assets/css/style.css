@@ -406,6 +406,11 @@ figcaption {
   color: #8d8d8d;
 }
 
+.btn-bordered.red {
+  border-color: #e63312;
+  color: #e63312;
+}
+
 /* 텍스트 */
 .txt-bold {
   font-weight: 700;
@@ -463,6 +468,27 @@ figcaption {
   margin-top: 12px;
 }
 
+.list-number > ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 7px;
+}
+
+.list-number > ul li:not(:first-child) {
+  margin-top: 5px;
+}
+
 /* input */
 .input-default {
   width: 100%;
@@ -500,6 +526,15 @@ figcaption {
 .chkbox-rounded {
   position: relative;
   font-size: 0;
+}
+
+.chkbox-rounded.sm .txt::before {
+  width: 19px;
+  height: 19px;
+}
+
+.chkbox-rounded.sm.c-lightblue input:checked + .txt::before {
+  background-size: 13px;
 }
 
 .chkbox-rounded .txt::before {
@@ -769,6 +804,7 @@ figcaption {
 }
 
 .user-form-choice .bind .radio-chk-display.disabled ~ .input-default,
+.user-form-choice .bind .radio-chk-display.disabled ~ .select-default,
 .user-form-choice .bind .radio-chk-display.disabled ~ .space {
   opacity: 0.3;
 }
@@ -2206,7 +2242,7 @@ footer {
 .sms-txt-input .special-character {
   display: none;
   position: absolute;
-  top: 533px;
+  top: 563px;
   left: 0;
   width: 304px;
 }
@@ -2227,6 +2263,7 @@ footer {
 }
 
 .sms-txt-write .list-number {
+  position: relative;
   margin-top: 10px;
 }
 
@@ -2249,4 +2286,19 @@ footer {
 
 .sms-txt-write .list-number-header .btn-bordered.sm {
   padding: 0 8px;
+}
+
+.sms-txt-write .list-number > ul {
+  width: calc(100% + 14px);
+}
+
+.sms-txt-write .list-number > .btn-bordered.red {
+  position: absolute;
+  right: 7px;
+  bottom: 10px;
+}
+
+.sms-txt-write .user-form-choice .select-default select {
+  padding-left: 12px;
+  padding-right: 18px;
 }
