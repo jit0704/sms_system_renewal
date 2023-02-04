@@ -262,6 +262,10 @@ figcaption {
 /* ###############################
     help style
 ################################## */
+.inline-block {
+  display: inline-block !important;
+}
+
 .lesp-1 {
   letter-spacing: -1px !important;
 }
@@ -385,10 +389,19 @@ figcaption {
   border-color: #f1f2f4;
 }
 
+.btn-secondary.sm {
+  line-height: 36px;
+}
+
 .btn-secondary.txt-sm {
   padding: 0 12px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.btn-secondary.gray {
+  color: #727e8b;
+  border-color: #727e8b;
 }
 
 .btn-bordered {
@@ -409,6 +422,26 @@ figcaption {
 .btn-bordered.red {
   border-color: #e63312;
   color: #e63312;
+}
+
+.btn-prev {
+  width: 21px;
+  height: 21px;
+  background: url("../images/icon_arr_down.png") no-repeat 50% 50%;
+  background-size: contain;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.btn-next {
+  width: 21px;
+  height: 21px;
+  background: url("../images/icon_arr_down.png") no-repeat 50% 50%;
+  background-size: contain;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 /* 텍스트 */
@@ -520,6 +553,12 @@ figcaption {
   padding: 12px 10px;
   background: url("../images/icon_calender.png") no-repeat 92% 13px;
   background-size: 20px;
+}
+
+.input-default.sm {
+  height: 38px;
+  padding: 11px 15px;
+  font-size: 14px;
 }
 
 /* 체크박스 */
@@ -874,6 +913,95 @@ figcaption {
 
 .search-group .btn-secondary {
   min-width: auto;
+}
+
+/* 페이징 */
+.paging {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 5px;
+  margin: 14px 0 25px;
+  text-align: center;
+}
+
+.paging-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 5px;
+}
+
+.paging-num a,
+.paging-num button {
+  width: 34px;
+  line-height: 34px;
+  border-radius: 5px;
+  color: #6e6e6e;
+  background: #eaebee;
+  font-size: 14px;
+}
+
+.paging-num .active {
+  color: #fff;
+  background: #6e6e6e;
+}
+
+/* 테이블 리스트 템플릿 */
+.ly-table-list-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 25px 0 15px;
+}
+
+.ly-table-list > .table-primary {
+  height: 300px;
+}
+
+.ly-table-list > .table-primary tbody th,
+.ly-table-list > .table-primary tbody td {
+  padding: 7.5px;
+}
+
+.ly-table-list > .table-primary tbody td .search-group input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ly-table-list > .table-primary tbody td > .btn-secondary {
+  margin: 0 auto;
 }
 
 /* ###############################
@@ -1472,7 +1600,7 @@ footer {
   position: fixed;
   top: 112px;
   right: 110px;
-  z-index: 1;
+  z-index: 5;
   min-width: 194px;
   border-radius: 10px;
   background: #fff;
@@ -2301,4 +2429,9 @@ footer {
 .sms-txt-write .user-form-choice .select-default select {
   padding-left: 12px;
   padding-right: 18px;
+}
+
+/* 주소록 */
+.addressbook-container .understand-box {
+  margin-bottom: 100px;
 }
