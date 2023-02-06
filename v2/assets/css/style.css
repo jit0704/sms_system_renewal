@@ -701,6 +701,10 @@ figcaption {
   border-radius: 5px;
 }
 
+.understand-box.mb-100 {
+  margin-bottom: 100px;
+}
+
 .understand-box > em {
   font-size: 14px;
   color: #e63312;
@@ -2182,6 +2186,13 @@ footer {
   text-align: center;
 }
 
+.join-container .txt-mandatory {
+  margin-top: 20px;
+  padding-left: 21px;
+  text-indent: -17px;
+  font-size: 14px;
+}
+
 .join-container .user-form:not(:first-child) {
   margin-top: 50px;
 }
@@ -2214,7 +2225,7 @@ footer {
   margin-top: 50px;
 }
 
-.join-container .btn-group {
+.join-container > .btn-group {
   margin: 74px 0 61px;
 }
 
@@ -2431,7 +2442,13 @@ footer {
   padding-right: 18px;
 }
 
-/* 주소록 */
-.addressbook-container .understand-box {
-  margin-bottom: 100px;
+/* 수신거부 */
+.donot-call-container .ly-table-list-header .btn-group .bind {
+  gap: 0 5px;
+}
+
+/* 전송 통계 */
+.send-stats-container .table-primary {
+  height: auto;
+  margin-bottom: 10px;
 }
