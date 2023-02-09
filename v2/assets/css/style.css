@@ -1311,7 +1311,7 @@ figcaption {
 }
 
 .navigation .bind-left .logo {
-  width: 130px;
+  width: 82px;
   height: 22px;
   margin-right: 50px;
   background: url("../images/logo_black.png") no-repeat 0 0;
@@ -2298,7 +2298,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 304px;
-  margin: 76px auto 59px;
+  margin: 0 auto;
+  padding: 76px 0 47px;
 }
 
 .sms-txt-viwer-header > em {
@@ -2322,31 +2323,55 @@ footer {
 }
 
 .sms-txt-input textarea {
-  height: 398px;
-  padding: 0 15px 15px;
+  height: 348px;
+  padding: 12px 15px;
 }
 
 .sms-txt-input .refer {
-  padding: 0 15px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 5px 0;
+  padding: 0 15px;
 }
 
 .sms-txt-input .refer [class*='refer'] {
-  display: block;
+  width: 100%;
   line-height: 29px;
   font-size: 12px;
   text-align: center;
   border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.sms-txt-input .refer .refer1 {
+.sms-txt-input .refer.bottom {
+  margin-bottom: 30px;
+}
+
+.sms-txt-input .refer-skyblue {
   border: 1px solid #468bf0;
   background: #e9f2fe;
 }
 
-.sms-txt-input .refer .refer2 {
-  margin-top: 5px;
+.sms-txt-input .refer-red {
   color: #fff;
   background: #e63312;
+}
+
+.sms-txt-input .refer-blue {
+  color: #fff;
+  background: #468bf0;
 }
 
 .sms-txt-input .btn-group-function {
@@ -2391,9 +2416,7 @@ footer {
 }
 
 .sms-txt-write {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 454px;
   padding-top: 15px;
 }
 
@@ -2437,9 +2460,163 @@ footer {
   bottom: 10px;
 }
 
+.sms-txt-write .user-form-choice .radio-chk-display .txt {
+  min-width: 100px;
+}
+
 .sms-txt-write .user-form-choice .select-default select {
   padding-left: 12px;
   padding-right: 18px;
+}
+
+/* 연락처 팝업 */
+.address-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 10px;
+  margin-top: 15px;
+}
+
+.address-add > article {
+  height: 533px;
+  border-radius: 5px;
+}
+
+.address-add-guide {
+  width: 407px;
+  padding: 20px 25px;
+  border: 1px solid #cccfd9;
+}
+
+.address-add-guide > em {
+  margin-bottom: 9px;
+  line-height: 33px;
+  font-weight: 500;
+}
+
+.address-add-guide ol {
+  font-size: 14px;
+  counter-reset: index 0;
+}
+
+.address-add-guide ol li {
+  position: relative;
+  padding-left: 28px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+}
+
+.address-add-guide ol li span {
+  display: block;
+  color: #6e6e6e;
+}
+
+.address-add-guide ol li::before {
+  content: counter(index);
+  position: absolute;
+  left: 0;
+  top: 0;
+  counter-increment: index 1;
+  width: 21px;
+  line-height: 21px;
+  background: #468bf0;
+  border-radius: 999px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+
+.address-add-guide ol li + li {
+  margin-top: 11px;
+}
+
+.address-add-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px 25px 25px;
+  background: #f6f5f3;
+}
+
+.address-add-input-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6px;
+}
+
+.address-add-input-header > em {
+  font-weight: 500;
+}
+
+.address-add-input-header > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 10px;
+}
+
+.address-add-input-header > span span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.address-add-input-header > span span em {
+  color: #468bf0;
+}
+
+.address-add-input-header > span .btn-bordered {
+  padding: 0 17px;
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.address-add-input-body {
+  height: calc(100% - 38px);
+  padding: 25px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.address-add-input-body textarea {
+  height: 100%;
+  line-height: 29px;
+  font-size: 14px;
+  background: url("../images/bg_img_line.png") repeat 0 0;
+  background-size: auto;
 }
 
 /* 수신거부 */

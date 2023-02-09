@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>연락처 추가 팝업</title>
+    <link rel="stylesheet" href="/v2/assets/css/style.css" />
+    <script defer src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script defer src="/v2/assets/js/lib/jquery.modal.min.js"></script>
+    <script defer src="/v2/assets/js/lib/includeHTML.js"></script>
+    <script defer src="/v2/assets/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p><a href="#ex1" class="btn-modal-open">연락처 추가 팝업 호출</a></p>
+
+      <div id="ex1" class="modal">
+        <div class="modal-primary">
+          <div class="modal-header">
+            <span class="tit">연락처 추가</span>
+          </div>
+          <div class="modal-content">
+            <div class="address-add">
+              <article class="address-add-guide">
+                <em>주소록 등록 안내</em>
+                <ol>
+                  <li>최대 50,000개까지 등록 가능</li>
+                  <li>문서파일 [복사], [붙여넣기] 가능</li>
+                  <li>핸드폰번호, 이름 순으로 입력</li>
+                  <li>입력 예시 (e.g. 010-0000-0000, 홍길동) <span>* 입력은 입력하지 않아도 됩니다.</span></li>
+                  <li>문의사항 또는 등록대행을 원하시면 고객센터로 연락주세요.</li>
+                </ol>
+              </article>
+              <!-- //address-add-guide -->
+              <article class="address-add-input">
+                <div class="address-add-input-header">
+                  <em>그룹명 : 발송그룹 1</em>
+                  <span>
+                    <span>총 <em>2</em>명</span>
+                    <button type="button" class="btn-bordered sm gray">인원수 확인</button>
+                  </span>
+                </div>
+                <!-- //address-add-input-header -->
+                <div class="address-add-input-body">
+                  <textarea>123</textarea>
+                </div>
+              </article>
+              <!-- //address-add-input -->
+            </div>
+            <!-- //address-add -->
+          </div>
+          <!-- //modal-content -->
+          <div class="modal-btn-group">
+            <a href="#" rel="modal:close" class="btn-secondary">닫기</a>
+            <a href="#" rel="modal:close" class="btn-primary">주소록 등록</a>
+          </div>
+          <!-- //modal-btn-group -->
+        </div>
+        <!-- //management -->
+      </div>
+      <!-- //modal -->
+    </div>
+    <!-- //wrapper -->
+
+    <script>
+      // 퍼블리싱 확인용
+      setTimeout(() => {
+        $('.btn-modal-open').trigger('click');
+      }, 100);
+    </script>
+  </body>
+</html>
