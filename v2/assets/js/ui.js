@@ -21,12 +21,7 @@ const cmmnUi = {
       var gnbDepth2 = $('.gnb-depth2');
       $(document).on('mouseenter', '.gnb-depth1', function () {
         gnbBg.slideDown(100);
-        if (!$('.gnb').is('.type2')) {
-          gnbDepth2.removeClass('active');
-          $(this).next('.gnb-depth2').addClass('active');
-        } else {
-          gnbDepth2.addClass('active');
-        }
+        gnbDepth2.addClass('active');
       });
       $(document).on('mouseleave', '.navigation', function () {
         gnbBg.slideUp(200);

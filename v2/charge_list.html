@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
-    <title>전송통계</title>
+    <title>충전내역</title>
     <link rel="stylesheet" href="/v2/assets/css/style.css" />
     <script defer src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
     <script defer src="/v2/assets/js/lib/includeHTML.js"></script>
@@ -19,8 +19,8 @@
         <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside>
 
         <main class="sub-container">
-          <div class="send-stats-container">
-            <h3 class="sub-tit">전송통계</h3>
+          <div class="charge-list-container">
+            <h3 class="sub-tit">충전내역</h3>
 
             <section class="ly-table-list">
               <article class="ly-table-list-header">
@@ -34,6 +34,7 @@
               </article>
               <!-- //ly-table-list-header -->
               <div class="table-primary">
+                <!-- 조회 정보가 없을경우 table태그에 data-none 클래스 추가 -->
                 <table>
                   <colgroup>
                     <col style="width: 20%" />
@@ -44,20 +45,23 @@
                   </colgroup>
                   <thead>
                     <tr>
-                      <th>상품구분</th>
-                      <th>전송시도</th>
-                      <th>전송성공</th>
-                      <th>전송실패</th>
-                      <th>전송실패</th>
+                      <th>날짜</th>
+                      <th>금액</th>
+                      <th>결제방식</th>
+                      <th>승인여부</th>
+                      <th>비고</th>
                     </tr>
                   </thead>
                   <tbody>
+                    <!-- <tr>
+                      <td colspan="5">조회된 글이 없습니다.</td>
+                    </tr> -->
                     <tr>
-                      <td>합계</td>
-                      <td>0</td>
-                      <td>0</td>
-                      <td>0</td>
-                      <td>0</td>
+                      <td>2022-11-01</td>
+                      <td>10,000</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>
@@ -69,12 +73,13 @@
             <section class="understand-box mb-100">
               <em>알아두세요</em>
               <p>
-                현재 전송이 진행중인 건(예약발송 대기 등)은 포함되어 있지 않습니다.<br />
-                전송통계는 최근 6개월까지 조회 가능합니다.
+                세금계산서는 월 결제금액을 합산하여 매월 말일자로 익월초 발행됩니다.<br />
+                분기 마감된 세금계산서는 발행이 불가능합니다.<br />
+                세금계산서 발급은 신청한 회원님에 대해서만 발행되며, 신용카드 결제금액은 제외됩니다.
               </p>
             </section>
           </div>
-          <!-- //send-stats-container -->
+          <!-- //charge-list-container -->
         </main>
         <!-- //sub-container -->
 

@@ -1258,7 +1258,7 @@ figcaption {
 
 .sub-container {
   width: 1200px;
-  margin: 95px auto 0;
+  margin: 51px auto 0;
 }
 
 .sub-container.type2 {
@@ -1266,6 +1266,12 @@ figcaption {
 }
 
 /* 네비게이션 */
+.navigation {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid #e7e9ea;
+}
+
 .navigation-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1379,22 +1385,18 @@ figcaption {
 .navigation .bg-depth2 {
   display: none;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 70px;
   left: 0;
   width: 100%;
-  height: 45px;
+  height: 186px;
   border-top: 1px solid #e7e9ea;
   background: #f6f6f6;
 }
 
-.navigation .bg-depth2.type2 {
-  height: 143px;
-  z-index: 0;
-}
-
 .navigation.dark {
   background: #000;
+  border: 0;
 }
 
 .navigation.dark .bind-left .logo {
@@ -1415,6 +1417,14 @@ figcaption {
 
 .navigation.dark .bind-right > a:nth-last-child(1)::before, .navigation.dark .bind-right > a:nth-last-child(2)::before {
   color: #6e6e6e;
+}
+
+.navigation.dark .gnb > li::before {
+  display: none;
+}
+
+.navigation.dark .gnb > li:hover a {
+  font-weight: 400;
 }
 
 .navigation.dark .gnb-depth1 {
@@ -1446,6 +1456,7 @@ figcaption {
   content: '';
   position: absolute;
   top: 44px;
+  z-index: 1;
   width: 100%;
   height: 3px;
   background: #468bf0;
@@ -1472,14 +1483,6 @@ figcaption {
   font-weight: 700;
 }
 
-.gnb > li:nth-child(2) .gnb-depth2 {
-  left: 20px;
-}
-
-.gnb > li:nth-child(3) .gnb-depth2, .gnb > li:nth-child(4) .gnb-depth2 {
-  left: 3px;
-}
-
 .gnb-depth1 {
   font-size: 18px;
   color: #bbb;
@@ -1490,71 +1493,44 @@ figcaption {
 .gnb-depth2 {
   position: absolute;
   top: 26px;
-  width: 675px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 29px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.8s;
   transition: opacity 0.8s;
+  white-space: nowrap;
 }
 
 .gnb-depth2 a {
   color: #bbb;
+  text-align: center;
 }
 
 .gnb-depth2 a + a {
-  margin-left: 35px;
+  margin-top: 15px;
 }
 
 .gnb-depth2 a:hover {
   color: #468bf0;
-  font-weight: 700;
 }
 
 .gnb .active.gnb-depth2 {
   opacity: 1;
   visibility: visible;
-}
-
-.gnb.type2 > li {
-  min-width: 83px;
-}
-
-.gnb.type2 > li::before {
-  display: none;
-}
-
-.gnb.type2 > li:nth-child(1) .gnb-depth2 a, .gnb.type2 > li:nth-child(3) .gnb-depth2 a, .gnb.type2 > li:nth-child(4) .gnb-depth2 a {
-  width: 67px;
-  text-align: center;
-}
-
-.gnb.type2 > li:nth-child(2) .gnb-depth2 a {
-  width: 83px;
-  text-align: center;
-}
-
-.gnb.type2 > li:last-child .gnb-depth2 {
-  width: 135px;
-}
-
-.gnb.type2 > li:hover > a {
-  font-weight: 400;
-}
-
-.gnb.type2 .gnb-depth2 {
-  width: 124px;
-  left: 0 !important;
-  z-index: 1;
-}
-
-.gnb.type2 .gnb-depth2 a {
-  display: block;
-  margin-left: 0;
-}
-
-.gnb.type2 .gnb-depth2 a + a {
-  margin-top: 15px;
 }
 
 /* 푸터 */
@@ -2628,4 +2604,81 @@ footer {
 .send-stats-container .table-primary {
   height: auto;
   margin-bottom: 10px;
+}
+
+/* 문자 단가 */
+.sms-unit-container .section1 {
+  margin: 29px 0 40px;
+}
+
+.sms-unit-container .section1 .tit {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sms-unit-container .section2 {
+  margin-bottom: 20px;
+}
+
+.sms-unit-container .section2 .tit {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sms-unit-container .btn-group {
+  margin-bottom: 100px;
+}
+
+.sms-unit-container .btn-group .btn-primary {
+  margin-left: auto;
+}
+
+.payment-info-container {
+  border-top: 1px solid #6e6e6e;
+  border-bottom: 1px solid #6e6e6e;
+}
+
+.payment-info1 {
+  padding: 25px 24px;
+  border-bottom: 1px solid #cccfd9;
+}
+
+.payment-info1 em {
+  font-weight: 700;
+  margin-right: 28px;
+}
+
+.payment-info2 {
+  padding: 10px 24px;
+}
+
+.payment-info2 li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 15px;
+}
+
+.payment-info2 li + li {
+  margin-top: 10px;
+}
+
+.payment-info2 li .input-default {
+  width: 272px;
+}
+
+.payment-info2 li em {
+  color: #6e6e6e;
 }
