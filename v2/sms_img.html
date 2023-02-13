@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>이미지문자</title>
+    <link rel="stylesheet" href="/v2/assets/css/style.css" />
+    <script defer src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script defer src="/v2/assets/js/lib/includeHTML.js"></script>
+    <script defer src="/v2/assets/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sub">
+        <nav class="navigation" include-html="/v2/include/navigation.html"></nav>
+
+        <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside>
+
+        <main class="sub-container type2">
+          <div class="sms-txt-container">
+            <h3 class="sub-tit">이미지문자</h3>
+            <section class="sms-txt-content">
+              <article class="sms-txt-viwer">
+                <div class="sms-txt-viwer-header">
+                  <em>이미지문자</em>
+                  <span><em>26</em> / 90 byte</span>
+                </div>
+                <!-- //sms-txt-viwer-header -->
+                <div class="sms-txt-input">
+                  <div class="refer top">
+                    <em class="refer-skyblue">90 byte (한글 45자) 초과시, 자동 장문 전환</em>
+                    <em class="refer-blue">(광고)</em>
+                  </div>
+                  <!-- //refer -->
+
+                  <textarea></textarea>
+
+                  <div class="refer bottom">
+                    <em class="refer-blue">불법수집정보신고번호 118</em>
+                    <em class="refer-red">무료거부 0808870505</em>
+                  </div>
+                  <!-- //refer -->
+                  <div class="btn-group-function">
+                    <button type="button" class="btn-spchar">특수문자 입력</button>
+                    <button type="button">080 수신거부</button>
+                    <button type="button">메세지 보관함</button>
+                    <button type="button">문자내용 저장</button>
+                  </div>
+                  <!-- //btn-group-function -->
+
+                  <!-- special-character DIV에 active클래스 추가시 노출 -->
+                  <div class="special-character">
+                    <table width="250" border="1" style="border: 1px solid #bbb" cellspacing="0" cellpadding="0" bgcolor="#D7D7D7" class="class_tbl">
+                      <tbody id="spchar">
+                        <tr align="center" border="1" style="border: 1px solid #bbb" bgcolor="#FFFFFF">
+                          <td width="30" name="spchar" style="cursor: pointer">♥</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♡</td>
+                          <td width="30" name="spchar" style="cursor: pointer">★</td>
+                          <td width="30" name="spchar" style="cursor: pointer">☆</td>
+                          <td width="30" name="spchar" style="cursor: pointer">▶</td>
+                          <td width="30" name="spchar" style="cursor: pointer">▷</td>
+                          <td width="30" name="spchar" style="cursor: pointer">●</td>
+                          <td width="30" name="spchar" style="cursor: pointer">■</td>
+                        </tr>
+                        <tr align="center" border="1" style="border: 1px solid #bbb" bgcolor="#FFFFFF">
+                          <td width="30" name="spchar" style="cursor: pointer">▲</td>
+                          <td width="30" name="spchar" style="cursor: pointer">▒</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♨</td>
+                          <td width="30" name="spchar" style="cursor: pointer">™</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♪</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♬</td>
+                          <td width="30" name="spchar" style="cursor: pointer">☜</td>
+                          <td width="30" name="spchar" style="cursor: pointer">☞</td>
+                        </tr>
+                        <tr align="center" border="1" style="border: 1px solid #bbb" bgcolor="#FFFFFF">
+                          <td width="30" name="spchar" style="cursor: pointer">♂</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♀</td>
+                          <td width="30" name="spchar" style="cursor: pointer">◆</td>
+                          <td width="30" name="spchar" style="cursor: pointer">◇</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♣</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♧</td>
+                          <td width="30" name="spchar" style="cursor: pointer">☎</td>
+                          <td width="30" name="spchar" style="cursor: pointer">◀</td>
+                        </tr>
+                        <tr align="center" border="1" style="border: 1px solid #bbb" bgcolor="#FFFFFF">
+                          <td width="30" name="spchar" style="cursor: pointer">◁</td>
+                          <td width="30" name="spchar" style="cursor: pointer">○</td>
+                          <td width="30" name="spchar" style="cursor: pointer">□</td>
+                          <td width="30" name="spchar" style="cursor: pointer">▼</td>
+                          <td width="30" name="spchar" style="cursor: pointer">∑</td>
+                          <td width="30" name="spchar" style="cursor: pointer">㉿</td>
+                          <td width="30" name="spchar" style="cursor: pointer">◈</td>
+                          <td width="30" name="spchar" style="cursor: pointer">▣</td>
+                        </tr>
+                        <tr align="center" border="1" style="border: 1px solid #bbb" bgcolor="#FFFFFF">
+                          <td width="30" name="spchar" style="cursor: pointer">『</td>
+                          <td width="30" name="spchar" style="cursor: pointer">』</td>
+                          <td width="30" name="spchar" style="cursor: pointer">☜</td>
+                          <td width="30" name="spchar" style="cursor: pointer">♬</td>
+                          <td width="30" name="spchar" style="cursor: pointer">⌒</td>
+                          <td width="30" name="spchar" style="cursor: pointer">¸</td>
+                          <td width="30" name="spchar" style="cursor: pointer">˛</td>
+                          <td width="30" name="spchar" style="cursor: pointer">∽</td>
+                        </tr>
+                        <tr align="center" border="1" style="border: 1px solid #bbb" bgcolor="#FFFFFF">
+                          <td width="30" name="spchar" style="cursor: pointer">з</td>
+                          <td width="30" name="spchar" style="cursor: pointer">§</td>
+                          <td width="30" name="spchar" style="cursor: pointer">⊙</td>
+                          <td width="30" name="spchar" style="cursor: pointer">※</td>
+                          <td width="30" name="spchar" style="cursor: pointer">∴</td>
+                          <td width="30" name="spchar" style="cursor: pointer">¤</td>
+                          <td width="30" name="spchar" style="cursor: pointer">∂</td>
+                          <td width="30" name="spchar" style="cursor: pointer">▩</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!-- //special-character -->
+                </div>
+                <!-- //sms-txt-input -->
+              </article>
+              <!-- //sms-txt-viwer -->
+
+              <article class="sms-txt-write">
+                <div class="user-form">
+                  <em>제목</em>
+                  <input type="text" placeholder="제목입력 (최대 30 byte, 발송관리용)" class="input-default" />
+                </div>
+                <!-- //user-form -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form">
+                  <em>사진첨부</em>
+                  <div class="list-number type2">
+                    <div class="list-number-header">
+                      <span class="sum">총 <em>3</em>개(최대 3개까지 등록 가능)</span>
+                      <span class="bind">
+                        <label class="input-file">
+                          <input type="file" />
+                          <span class="btn-bordered sm gray">사진첨부</span>
+                        </label>
+                      </span>
+                    </div>
+                    <!-- //list-number-header -->
+                    <ul>
+                      <li>
+                        <span>img01.png</span>
+                        <button type="button" class="btn-delete-file">x</button>
+                      </li>
+                      <li>
+                        <span>img02.png</span>
+                        <button type="button" class="btn-delete-file">x</button>
+                      </li>
+                      <li>
+                        <span>img03.png</span>
+                        <button type="button" class="btn-delete-file">x</button>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //list-number -->
+                  <div class="noti">
+                    <p>※ 형식 : jpg, jpeg, png</p>
+                    <p>※ 사이즈 : 1500 X 1440px 미만</p>
+                    <p>※ 용량 : 이미지당 200K 이하</p>
+                    <p>※ 메시지 수신시 이미지 순서는 통신사 사정에 따라 달라질 수 있음</p>
+                  </div>
+                </div>
+                <!-- //user-form -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form type2">
+                  <em>받는사람</em>
+                  <span class="bind">
+                    <input type="text" placeholder="휴대폰번호 입력" class="input-default" />
+                    <button type="button" class="btn-secondary">추가</button>
+                  </span>
+                </div>
+                <!-- //user-form -->
+                <div class="list-number">
+                  <div class="list-number-header">
+                    <span class="sum">총 <em>10</em>명</span>
+                    <span class="bind">
+                      <a href="#" class="btn-bordered sm gray">주소록 불러오기</a>
+                      <a href="#" class="btn-bordered sm gray">파일 붙여넣기</a>
+                      <a href="#" class="btn-bordered sm gray">엑셀 붙여넣기</a>
+                    </span>
+                  </div>
+                  <!-- //list-number-header -->
+                  <ul>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                    <li>
+                      <label class="chkbox-rounded c-lightblue sm">
+                        <input type="checkbox" />
+                        <span class="txt"><em class="hidden">체크박스</em></span>
+                      </label>
+                      <span>010-0000-0000</span>
+                    </li>
+                  </ul>
+                  <button type="button" class="btn-bordered sm red">삭제</button>
+                </div>
+                <!-- //list-number -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form-choice">
+                  <em class="tit">분할전송</em>
+                  <label class="radio-chk-display">
+                    <input type="radio" name="divide" data-ui="divide-unused" />
+                    <span class="txt">미사용</span>
+                  </label>
+                  <div class="bind">
+                    <label class="radio-chk-display">
+                      <input type="radio" name="divide" data-ui="divide-used" />
+                      <span class="txt">사용</span>
+                    </label>
+                    <input type="number" class="input-default txt-center" style="width: 90px" />
+                    <span class="space">건씩</span>
+                    <input type="number" class="input-default txt-center" style="width: 90px" />
+                    <span class="space">분 간격</span>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //user-form-choice -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form-choice">
+                  <em class="tit">전송시간</em>
+                  <label class="radio-chk-display">
+                    <input type="radio" name="time" data-ui="time-used" />
+                    <span class="txt">즉시</span>
+                  </label>
+                  <div class="bind">
+                    <label class="radio-chk-display">
+                      <input type="radio" name="time" data-ui="time-unused" />
+                      <span class="txt">예약</span>
+                    </label>
+                    <input type="date" class="input-default date" style="width: 146px" />
+                    <!-- 230202 셀렉트 박스로 변경 -->
+                    <span class="select-default" style="width: 90px">
+                      <select>
+                        <option>오전9</option>
+                        <option>오전10</option>
+                        <option>오전11</option>
+                      </select>
+                    </span>
+                    <span class="space">시</span>
+                    <span class="select-default" style="width: 59px">
+                      <select>
+                        <option>00</option>
+                        <option>10</option>
+                        <option>20</option>
+                      </select>
+                    </span>
+                    <span class="space">분</span>
+                  </div>
+                  <!-- //bind -->
+                </div>
+                <!-- //user-form-choice -->
+
+                <hr class="line-thin" />
+
+                <div class="user-form">
+                  <em>발신번호</em>
+                  <span class="select-default">
+                    <select>
+                      <option>010-0000-0000 [기본 발신번호]</option>
+                      <option>010-0000-0000</option>
+                    </select>
+                  </span>
+                </div>
+                <!-- //user-form -->
+              </article>
+              <!-- //sms-txt-write -->
+            </section>
+            <!-- //sms-txt-content -->
+
+            <section class="understand-box mt-50">
+              <em>알아두세요</em>
+              <p>
+                수신번호 추가 시 중복번호, 형식에 맞지 않는 번호는 자동 제거됩니다.<br />
+                080 수신거부 기본, itku 블랙리스트 (선택: 정통부 신고번호 고객센터 문의) 자동 거부됩니다.
+              </p>
+            </section>
+            <!-- //understand-box -->
+
+            <div class="btn-group space-between">
+              <span class="bind">
+                <button type="button" class="btn-secondary">단축 URL 변환</button>
+                <button type="button" class="btn-secondary">발송가능건수 확인</button>
+              </span>
+              <span class="bind">
+                <button type="button" class="btn-secondary">3사 테스트 전송</button>
+                <button type="button" class="btn-primary">전송하기</button>
+              </span>
+            </div>
+            <!-- //btn-group -->
+          </div>
+          <!-- //sms-txt-container -->
+        </main>
+        <!-- //sub-container -->
+
+        <footer include-html="/v2/include/footer.html"></footer>
+      </div>
+      <!-- //sub -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
