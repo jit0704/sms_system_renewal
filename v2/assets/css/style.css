@@ -2497,6 +2497,40 @@ footer {
   padding-right: 18px;
 }
 
+/* 이미지 문자 */
+.sms-img .sms-txt-input .img-area {
+  position: relative;
+  overflow-y: overlay;
+  height: 150px;
+  margin-top: 5px;
+  padding: 0 15px;
+}
+
+.sms-img .sms-txt-input .img-area::after {
+  content: '📂 우측 사진첨부를 통해\A이미지를 등록해주세요.';
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: pre;
+  color: #575757;
+}
+
+.sms-img .sms-txt-input .img-area img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.sms-img .sms-txt-input textarea {
+  height: 229px;
+}
+
 /* 연락처 팝업 */
 .address-add {
   display: -webkit-box;
