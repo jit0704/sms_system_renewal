@@ -278,6 +278,14 @@ figcaption {
   text-align: center !important;
 }
 
+.verti-top {
+  vertical-align: top !important;
+}
+
+.font-black {
+  font-weight: 700 !important;
+}
+
 /* ###############################
     공통 컴포넌트 모음
 ################################## */
@@ -329,6 +337,10 @@ figcaption {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 0 10px;
+}
+
+.btn-group .align-right {
+  margin-left: auto;
 }
 
 .btn-primary {
@@ -775,6 +787,10 @@ figcaption {
   border-bottom: 1px solid #6e6e6e;
 }
 
+.table-primary table {
+  table-layout: fixed;
+}
+
 .table-primary table.data-none {
   height: 100%;
 }
@@ -782,6 +798,12 @@ figcaption {
 .table-primary table.data-none td {
   border-bottom: 0;
   color: #8d8d8d;
+}
+
+.table-primary table .speech-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .table-primary th,
@@ -813,6 +835,21 @@ figcaption {
   color: #727e8b;
   font-weight: 700;
   background: #f7f9ff;
+}
+
+.table-primary.type2 tbody th {
+  padding: 20px 10px;
+  font-size: 18px;
+  color: #727e8b;
+  font-weight: 400;
+  text-align: center;
+  background: #f7f9ff;
+}
+
+.table-primary.type2 tbody td {
+  padding: 20px 25px;
+  font-size: 18px;
+  text-align: left;
 }
 
 /* form components */
@@ -1035,6 +1072,12 @@ figcaption {
       -ms-flex-align: center;
           align-items: center;
   margin: 25px 0 15px;
+}
+
+.ly-table-list-header > .tit {
+  font-size: 20px;
+  font-weight: 700;
+  color: #6e6e6e;
 }
 
 .ly-table-list > .table-primary {
@@ -2262,7 +2305,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.sms-txt-container .btn-group {
+.sms-txt-container > .btn-group {
   width: 1200px;
   margin: 0 0 80px auto;
 }
@@ -2529,6 +2572,56 @@ footer {
 
 .sms-img .sms-txt-input textarea {
   height: 229px;
+}
+
+/* 문자발송 내용확인 */
+.sms-result {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 104px;
+}
+
+.sms-result .sms-txt-viwer {
+  width: 378px;
+  height: 766px;
+  margin-left: 38px;
+  background: url("../images/phone_visual2.png") no-repeat 0 0;
+  background-size: contain;
+}
+
+.sms-result .sms-txt-viwer-header {
+  padding: 68px 0 55px;
+}
+
+.sms-result .sms-txt-viwer .sms-txt-input textarea {
+  height: 576px;
+  padding-top: 0;
+}
+
+.sms-result .sms-result-display {
+  width: 777px;
+  margin-top: 75px;
+}
+
+.sms-result .sms-result-display > .btn-group {
+  margin-top: 50px;
+}
+
+.sms-result .sms-result-display > .btn-group .bind {
+  gap: 0 5px;
+}
+
+.sms-result .sms-result-display > .btn-group .bind button {
+  min-width: 150px;
+}
+
+.sms-result ~ .ly-table-list {
+  margin-top: -15px;
+}
+
+.sms-result ~ .ly-table-list > .btn-group {
+  margin: 22px 0 100px;
 }
 
 /* 연락처 팝업 */
