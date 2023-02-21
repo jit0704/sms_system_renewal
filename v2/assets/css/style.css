@@ -2582,6 +2582,19 @@ footer {
   margin-bottom: 104px;
 }
 
+.sms-result.sms-img .img-area {
+  margin-top: 0;
+}
+
+.sms-result.sms-img .img-area::after {
+  display: none;
+}
+
+.sms-result.sms-img div.sms-txt-input textarea {
+  height: 427px;
+  padding-top: 12px;
+}
+
 .sms-result .sms-txt-viwer {
   width: 378px;
   height: 766px;
