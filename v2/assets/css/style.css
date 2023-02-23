@@ -566,6 +566,10 @@ figcaption {
   color: #1a1a1a;
 }
 
+.input-default:disabled {
+  opacity: 0.3;
+}
+
 .input-default::-webkit-input-placeholder {
   color: #8d8d8d;
 }
@@ -2873,6 +2877,70 @@ footer {
 
 .payment-info2 li em {
   color: #6e6e6e;
+}
+
+/* 마이페이지 */
+.mypage-container {
+  width: 886px;
+  margin: 0 auto;
+}
+
+.mypage-container > h2 {
+  margin: 80px 0 56px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #727e8b;
+  text-align: center;
+}
+
+.mypage-container > h2 em {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.mypage-container .huge-box {
+  padding: 58px 0 66px;
+}
+
+.mypage-container .understand-box {
+  width: 100%;
+  margin-top: 45px;
+}
+
+.huge-box {
+  background: #fff;
+  border: 1px solid #eaebee;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.huge-box > * {
+  width: 454px;
+  margin: 0 auto;
+}
+
+.huge-box .user-form ~ .user-form {
+  margin-top: 30px;
+}
+
+.huge-box .btn-group {
+  margin-top: 42px;
+}
+
+.huge-box .more-info {
+  margin-top: 53px;
+}
+
+.huge-box .more-info span {
+  color: #8d8d8d;
+}
+
+.huge-box .more-info a {
+  margin-left: 8px;
+  color: #1a1a1a;
 }
 
 /* 에러 화면 */

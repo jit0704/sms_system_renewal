@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>내정보변경</title>
+    <link rel="stylesheet" href="/v2/assets/css/style.css" />
+    <script defer src="/v2/assets/js/lib/jquery-3.5.1.min.js"></script>
+    <script defer src="/v2/assets/js/lib/includeHTML.js"></script>
+    <script defer src="/v2/assets/js/ui.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mypage">
+        <nav class="navigation" include-html="/v2/include/navigation.html"></nav>
+
+        <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside>
+
+        <div class="mypage-container">
+          <h2>회원님의 정보보호를 위해<em>비밀번호를 확인해 주세요.</em></h2>
+
+          <article class="huge-box">
+            <div class="user-form">
+              <em>이름</em>
+              <input type="text" placeholder="이름 입력" class="input-default" value="홍길동" disabled />
+            </div>
+            <div class="user-form">
+              <em>비밀번호</em>
+              <input type="password" placeholder="비밀번호 입력(영문, 숫자, 특수문자 조합 8~20자)" class="input-default" />
+            </div>
+
+            <!-- disabled 클래스 제거시 버튼 활성화 -->
+            <div class="btn-group w-full">
+              <a href="#" class="btn-primary lg disabled">회원가입</a>
+            </div>
+
+            <div class="more-info">
+              <span>비밀번호를 잊으셨나요?</span>
+              <a href="#">비밀번호 찾기</a>
+            </div>
+          </article>
+          <!-- //huge-box -->
+
+          <section class="understand-box mb-100">
+            <em>알아두세요</em>
+            <p>
+              외부로부터 고객님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 확인하고 있습니다.<br />
+              비밀번호가 3회 이상 틀릴 경우 자동 로그아웃 됩니다.
+            </p>
+          </section>
+        </div>
+        <!-- //mypage-container -->
+
+        <footer include-html="/v2/include/footer.html"></footer>
+      </div>
+      <!-- //mypage -->
+    </div>
+    <!-- //wrapper -->
+  </body>
+</html>
