@@ -266,6 +266,10 @@ figcaption {
   display: inline-block !important;
 }
 
+.my-30 {
+  margin: 30px 0 !important;
+}
+
 .lesp-1 {
   letter-spacing: -1px !important;
 }
@@ -900,6 +904,31 @@ figcaption {
   color: #468bf0;
 }
 
+.user-form-choice.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-form-choice.row .bind {
+  margin-top: 0;
+}
+
+.user-form-choice.row .divide {
+  margin: 0 24px;
+  color: #eaebee;
+}
+
 .user-form-choice .tit {
   display: block;
   margin-bottom: 10px;
@@ -1349,6 +1378,26 @@ figcaption {
 .sub-tit {
   font-size: 22px;
   font-weight: 700;
+}
+
+.sub-tit-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sub-tit-wrap .btn-group {
+  gap: 0 10px;
 }
 
 .sub-container {
@@ -2314,7 +2363,7 @@ footer {
   margin: 0 0 80px auto;
 }
 
-.sms-txt-container .btn-spchar::after {
+.btn-spchar::after {
   content: '';
   display: inline-block;
   width: 0;
@@ -2576,6 +2625,87 @@ footer {
 
 .sms-img .sms-txt-input textarea {
   height: 229px;
+}
+
+/*머지전송 */
+.merge-send-container .sub-tit {
+  margin-left: 0;
+}
+
+.merge-send-container .sms-result {
+  gap: 0 72px;
+  margin-bottom: 45px;
+}
+
+.merge-send-container .sms-result .sms-txt-viwer {
+  margin-left: 0;
+  background: url("../images/phone_visual3.png") no-repeat 0 0;
+  background-size: contain;
+}
+
+.merge-send-container .sms-result .sms-txt-viwer.left .sms-txt-input textarea {
+  height: 448px;
+  padding-top: 12px;
+}
+
+.merge-send-container .sms-result .sms-txt-viwer.right .sms-txt-input textarea {
+  height: 536px;
+}
+
+.merge-send-container .sms-result .sms-txt-viwer.right .sms-txt-input .btn-group-function button {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.merge-send-container .change-group {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 13px 0;
+  height: 766px;
+  margin-top: 33px;
+}
+
+.merge-send-container .change-group button {
+  width: 100%;
+  line-height: 46px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  color: #6e6e6e;
+  text-align: center;
+}
+
+.merge-send-container > .btn-group {
+  margin: 20px 0 80px;
+}
+
+.merge-send-container > .table-primary.type2 tbody td {
+  padding: 10px;
+}
+
+.merge-send-container > .table-primary.type2 .send-time .radio-chk-display .txt {
+  min-width: 102px;
+}
+
+.merge-send-container > .table-primary.type2 .send-time .divide {
+  margin: 0 17px;
+}
+
+.merge-send-container > .table-primary.type2 .send-time .select-default select {
+  padding-right: 20px;
 }
 
 /* 문자발송 내용확인 */
