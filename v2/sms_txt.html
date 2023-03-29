@@ -281,9 +281,36 @@
             <!-- //understand-box -->
 
             <div class="btn-group space-between">
-              <span class="bind">
+              <!-- 230325 sms-count-container 클래스 추가 -->
+              <span class="bind sms-count-container">
                 <button type="button" class="btn-secondary">단축 URL 변환</button>
-                <button type="button" class="btn-secondary">발송가능건수 확인</button>
+                <!-- 230325 data-ui="btn-sms-count" 속성 추가 -->
+                <button type="button" class="btn-secondary" data-ui="btn-sms-count">발송가능건수 확인</button>
+
+                <!-- 230325 발송건수 튤팁 추가 -->
+                <ul class="sms-count" style="left: 150px">
+                  <li>
+                    <div>
+                      <em>단문문자</em>
+                      <span>단가 11원</span>
+                    </div>
+                    <em>5건</em>
+                  </li>
+                  <li>
+                    <div>
+                      <em>장문문자</em>
+                      <span>단가 33원</span>
+                    </div>
+                    <em>4건</em>
+                  </li>
+                  <li>
+                    <div>
+                      <em>이미지문자</em>
+                      <span>단가 88원</span>
+                    </div>
+                    <em>1건</em>
+                  </li>
+                </ul>
               </span>
               <span class="bind">
                 <button type="button" class="btn-secondary">3사 테스트 전송</button>

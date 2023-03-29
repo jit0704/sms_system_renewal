@@ -14,6 +14,7 @@ const cmmnUi = {
     cmmnUi.gnb();
     cmmnUi.modal();
     cmmnUi.userForm();
+    cmmnUi.smsCount(); //230325 추가
   },
   gnb() {
     setTimeout(function () {
@@ -66,6 +67,13 @@ const cmmnUi = {
       var isChk = $(this).is(':checked');
       var linkTxt = $(this).parent().next();
       isChk ? linkTxt.addClass('active') : linkTxt.removeClass('active');
+    });
+  },
+
+  //230325 발송가능건수 확인 튤팁 토글 버튼
+  smsCount() {
+    $('[data-ui="btn-sms-count"]').on('click', function () {
+      $(this).closest('.sms-count-container').find('.sms-count').toggle();
     });
   },
 };

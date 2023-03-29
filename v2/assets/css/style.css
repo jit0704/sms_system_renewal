@@ -266,6 +266,10 @@ figcaption {
   display: inline-block !important;
 }
 
+.mt-10 {
+  margin-top: 10px !important;
+}
+
 .my-30 {
   margin: 30px 0 !important;
 }
@@ -574,6 +578,12 @@ figcaption {
   opacity: 0.3;
 }
 
+.input-default.disabled-bg-gary:disabled {
+  opacity: 1;
+  background: #f6f5f3;
+  color: #6e6e6e;
+}
+
 .input-default::-webkit-input-placeholder {
   color: #8d8d8d;
 }
@@ -769,16 +779,14 @@ figcaption {
 }
 
 .understand-box > em::before {
-  content: '!';
+  content: '';
   display: inline-block;
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
+  width: 26px;
+  height: 26px;
   margin-right: 7px;
-  border-radius: 100%;
-  background: #e63312;
-  color: #fff;
-  text-align: center;
+  vertical-align: middle;
+  background: url("../images/icon_megaphone.png") no-repeat 0 0;
+  background-size: contain;
 }
 
 .understand-box > p {
@@ -1325,6 +1333,14 @@ figcaption {
   height: 100%;
 }
 
+.modal-primary.h-auto {
+  height: auto;
+}
+
+.modal-primary.h-auto .modal-content {
+  height: auto;
+}
+
 .modal-primary.general .modal-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #979797;
@@ -1368,7 +1384,7 @@ figcaption {
     레이아웃 정의
 ################################## */
 .wrapper {
-  min-width: 1200px;
+  min-width: 1760px;
 }
 
 .sub {
@@ -1430,7 +1446,7 @@ figcaption {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 1200px;
+  width: 1760px;
   margin: 0 auto;
   padding: 24px 0 20px;
 }
@@ -1461,9 +1477,9 @@ figcaption {
 }
 
 .navigation .bind-left .logo {
-  width: 82px;
-  height: 22px;
-  margin-right: 50px;
+  width: 122px;
+  height: 28px;
+  margin-right: 198px;
   background: url("../images/logo_black.png") no-repeat 0 0;
   background-size: contain;
 }
@@ -1490,7 +1506,7 @@ figcaption {
 }
 
 .navigation .bind-right > a:nth-last-child(1), .navigation .bind-right > a:nth-last-child(2) {
-  color: #6e6e6e;
+  color: #1a1a1a;
 }
 
 .navigation .bind-right > a:nth-last-child(1)::before, .navigation .bind-right > a:nth-last-child(2)::before {
@@ -1589,7 +1605,7 @@ figcaption {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 0 40px;
+  gap: 0 60px;
 }
 
 .gnb > li {
@@ -1629,7 +1645,7 @@ figcaption {
 
 .gnb-depth1 {
   font-size: 18px;
-  color: #bbb;
+  color: #6e6e6e;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
@@ -1660,7 +1676,7 @@ figcaption {
 }
 
 .gnb-depth2 a {
-  color: #bbb;
+  color: #6e6e6e;
   text-align: center;
 }
 
@@ -1697,35 +1713,107 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 1200px;
-  height: 346px;
+  height: 265px;
   margin: 0 auto;
 }
 
-.footer-inner .customer-center {
-  margin: 15px 0 25px;
-  font-size: 18px;
+.footer-inner .consult {
+  margin-top: 16px;
 }
 
-.footer-inner .customer-center p:first-child {
-  font-weight: 700;
+.footer-inner .customer-center {
+  margin: 10px 0 25px;
 }
 
 .footer-inner address {
-  font-size: 18px;
+  margin: 24px 0;
+  line-height: 22px;
+  color: #6e6e6e;
 }
 
 .footer-inner .copy {
-  margin-top: 25px;
-  color: #575757;
+  margin: 0;
+  color: #6e6e6e;
+}
+
+.consult {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 10px;
+}
+
+.consult > span {
+  padding: 14px 20px 14px 12px;
+  border-radius: 5px;
+}
+
+.consult > span > span {
+  font-size: 18px;
+}
+
+.consult > span > em {
+  padding-left: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.consult-telegram {
+  background: #e3f3fb;
+}
+
+.consult-telegram > span {
+  color: #1990c7;
+}
+
+.consult-telegram > span::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  background: url("../images/icon_telegram.png") no-repeat 0 0;
+  background-size: contain;
+  vertical-align: top;
+}
+
+.consult-kakao {
+  background: #fbe400;
+}
+
+.consult-kakao > span {
+  color: #3e1d1b;
+}
+
+.consult-kakao > span::before {
+  content: '';
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+  background: url("../images/icon_kakaotalk.png") no-repeat 0 0;
+  background-size: contain;
+  vertical-align: top;
 }
 
 /* 퀵 메뉴 */
 .quick-menu {
   position: fixed;
   top: 112px;
-  right: 110px;
+  left: 125px;
   z-index: 5;
-  min-width: 194px;
+  min-width: 166px;
+  padding: 25px 0 30px;
   border-radius: 10px;
   background: #fff;
   text-align: center;
@@ -1735,7 +1823,7 @@ footer {
 }
 
 .quick-menu h2 {
-  margin: 33px 0 18px;
+  margin: 25px 0 15px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -1754,6 +1842,7 @@ footer {
 }
 
 .quick-menu [class*='quick'] .tit {
+  margin-bottom: 6px;
   font-size: 15px;
 }
 
@@ -1776,6 +1865,10 @@ footer {
   background: #e3f3fb;
 }
 
+.quick-menu .quick-telegram .tit {
+  color: #1990c7;
+}
+
 .quick-menu .quick-telegram .tit::before {
   background: url("../images/icon_telegram.png") no-repeat 0 0;
   background-size: contain;
@@ -1785,13 +1878,17 @@ footer {
   background: #fbe400;
 }
 
+.quick-menu .quick-kakao .tit {
+  color: #3e1d1b;
+}
+
 .quick-menu .quick-kakao .tit::before {
   background: url("../images/icon_kakaotalk.png") no-repeat 0 0;
   background-size: contain;
 }
 
 .quick-menu .line {
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 .quick-menu menu a {
@@ -1807,7 +1904,7 @@ footer {
 }
 
 .quick-menu menu a:last-child {
-  margin-bottom: 19px;
+  padding-bottom: 0;
   border-bottom: 0;
 }
 
@@ -1818,6 +1915,22 @@ footer {
   color: #468bf0;
   border-radius: 5px;
   border: 1px solid #468bf0;
+}
+
+.quick-menu .run-time {
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.quick-menu .run-time em {
+  display: block;
+  font-weight: 700;
+  color: #6e6e6e;
+}
+
+.quick-menu .run-time span {
+  display: block;
 }
 
 /* ###############################
@@ -1895,11 +2008,11 @@ footer {
 }
 
 .main .introduce-container > .bind.left .introduce-content:last-child::after {
-  bottom: 28px;
-  right: 33px;
-  width: 40px;
-  height: 40px;
-  background: url("../images/icon_refund.png") no-repeat 0 0;
+  bottom: 30px;
+  right: 23px;
+  width: 49px;
+  height: 38px;
+  background: url("../images/icon_msg4.png") no-repeat 0 0;
   background-size: contain;
 }
 
@@ -1923,21 +2036,25 @@ footer {
 }
 
 .main .introduce-container > .bind.center .introduce-content:last-child::after {
-  bottom: 23px;
-  right: 23px;
-  width: 48px;
-  height: 48px;
-  background: url("../images/icon_unsubscribe.png") no-repeat 0 0;
+  bottom: 31px;
+  right: 27px;
+  width: 40px;
+  height: 30px;
+  background: url("../images/icon_msg3.png") no-repeat 0 0;
   background-size: contain;
 }
 
 .main .introduce-container > .bind.right .introduce-content:first-child::after {
-  bottom: 30px;
+  bottom: 23px;
   right: 30px;
   width: 49px;
   height: 38px;
-  background: url("../images/icon_msg.png") no-repeat 0 0;
+  background: url("../images/icon_refund.png") no-repeat 0 0;
   background-size: contain;
+}
+
+.main .introduce-container > .bind.right .introduce-content:last-child > em {
+  font-size: 22px;
 }
 
 .main .introduce-container > .bind.right .introduce-content:last-child::after {
@@ -1952,7 +2069,7 @@ footer {
 .main .introduce-content {
   position: relative;
   height: 230px;
-  padding: 40px 0 0 45px;
+  padding: 45px 0 0 38px;
   border: 1px solid #fff;
   border-radius: 5px;
 }
@@ -2567,7 +2684,7 @@ footer {
 }
 
 .sms-txt-write .list-number-header .btn-bordered.sm {
-  padding: 0 8px;
+  padding: 0 14px;
 }
 
 .sms-txt-write .list-number > ul {
@@ -2602,19 +2719,17 @@ footer {
   padding: 0 15px;
 }
 
-.sms-img .sms-txt-input .img-area::after {
-  content: '📂 우측 사진첨부를 통해\A이미지를 등록해주세요.';
-  width: 100%;
+.sms-img .sms-txt-input .img-area .input-file {
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 0;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  text-align: center;
-  white-space: pre;
   color: #575757;
+  text-align: center;
 }
 
 .sms-img .sms-txt-input .img-area img {
@@ -2625,6 +2740,88 @@ footer {
 
 .sms-img .sms-txt-input textarea {
   height: 229px;
+}
+
+/* 단축 url */
+.shorten-url .modal-header {
+  margin-bottom: 45px;
+}
+
+.shorten-url .modal-content .user-form + .user-form {
+  margin-top: 35px;
+}
+
+.shorten-url .modal-content .user-form .btn-secondary {
+  min-width: 118px;
+}
+
+.shorten-url .modal-btn-group {
+  padding: 74px 0 35px;
+}
+
+/* 발송건수 확인 튤팁 */
+.sms-count {
+  display: none;
+  position: absolute;
+  top: 63px;
+  padding: 20px 15px;
+  width: 230px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.05);
+  background: #eaebee;
+}
+
+.sms-count::before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  top: -7px;
+  width: 0;
+  height: 0;
+  border-bottom: 7px solid #eaebee;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.sms-count li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 16px;
+}
+
+.sms-count li + li {
+  margin-top: 12px;
+}
+
+.sms-count li > div em {
+  font-size: 14px;
+}
+
+.sms-count li > div span {
+  padding-left: 4px;
+  font-size: 12px;
+  color: #8d8d8d;
+}
+
+.sms-count li > em {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sms-count-container {
+  position: relative;
 }
 
 /*머지전송 */

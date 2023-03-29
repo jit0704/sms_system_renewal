@@ -23,39 +23,27 @@
           <div class="user-form">
             <em>회원구분</em>
             <div class="btn-group w-full">
-              <a href="#" class="btn-primary">일반 회원</a>
-              <a href="#" class="btn-secondary">사업자 회원</a>
+              <!-- 230325 버튼에 lg 클래스 추가 -->
+              <a href="#" class="btn-primary lg">일반 회원</a>
+              <a href="#" class="btn-secondary lg">사업자 회원</a>
             </div>
+          </div>
+          <!-- //user-form -->
+
+          <!-- 230325 휴대폰 번호 및 이름 영역 수정 -->
+          <div class="user-form type2">
+            <em>휴대폰번호</em>
+            <span class="bind">
+              <input type="text" placeholder="본인인증 완료시 자동 입력됩니다" class="input-default disabled-bg-gary" disabled />
+              <!-- disabled 속성 추가시 버튼 비활성화 -->
+              <button type="button" class="btn-primary txt-sm">본인인증</button>
+            </span>
+            <!-- //bind -->
           </div>
           <!-- //user-form -->
           <div class="user-form">
             <em>이름</em>
-            <input type="text" placeholder="이름 입력" class="input-default" />
-          </div>
-          <!-- //user-form -->
-          <div class="user-form type2">
-            <em>휴대폰번호</em>
-            <span class="bind">
-              <span class="select-default">
-                <select>
-                  <option>통신사 선택</option>
-                  <option>KT</option>
-                  <option>SKT</option>
-                </select>
-              </span>
-              <input type="text" placeholder="휴대폰번호 입력" class="input-default" />
-              <!-- disabled 속성 제거시 버튼 활성화 -->
-              <button type="button" class="btn-secondary txt-sm" disabled>인증번호 발송</button>
-            </span>
-            <!-- //bind -->
-            <span class="bind is-time">
-              <input type="text" placeholder="인증번호 입력" class="input-default" />
-              <!-- time 요소에 hidden 클래스 추가시 숨김 -->
-              <time>03:00</time>
-              <!-- disabled 속성 제거시 버튼 활성화 -->
-              <button type="button" class="btn-primary txt-sm" disabled>확인</button>
-            </span>
-            <!-- //bind -->
+            <input type="text" placeholder="본인인증 완료시 자동 입력됩니다" class="input-default disabled-bg-gary" disabled />
           </div>
           <!-- //user-form -->
           <div class="user-form">

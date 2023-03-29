@@ -37,6 +37,11 @@
 
                   <!-- 230219 이미지 영역 추가 -->
                   <div class="img-area">
+                    <!-- 230325 이미지 첨부파일 버튼 추가 -->
+                    <label class="input-file">
+                      <input type="file" />
+                      <span class="txt">📂 이곳을 눌러 이미지를 등록해주세요.</span>
+                    </label>
                     <!-- <img src="https://via.placeholder.com/600" alt="테스트 이미지" /> -->
                   </div>
 
@@ -170,7 +175,7 @@
                     <p>※ 형식 : jpg, jpeg, png</p>
                     <p>※ 사이즈 : 1500 X 1440px 미만</p>
                     <p>※ 용량 : 이미지당 200K 이하</p>
-                    <p>※ 메시지 수신시 이미지 순서는 통신사 사정에 따라 달라질 수 있음</p>
+                    <!-- <p>※ 메시지 수신시 이미지 순서는 통신사 사정에 따라 달라질 수 있음</p> 230325 문구 삭제 -->
                   </div>
                 </div>
                 <!-- //user-form -->
@@ -321,9 +326,36 @@
             <!-- //understand-box -->
 
             <div class="btn-group space-between">
-              <span class="bind">
+              <!-- 230325 sms-count-container 클래스 추가 -->
+              <span class="bind sms-count-container">
                 <button type="button" class="btn-secondary">단축 URL 변환</button>
-                <button type="button" class="btn-secondary">발송가능건수 확인</button>
+                <!-- 230325 data-ui="btn-sms-count" 속성 추가 -->
+                <button type="button" class="btn-secondary" data-ui="btn-sms-count">발송가능건수 확인</button>
+
+                <!-- 230325 발송건수 튤팁 추가 -->
+                <ul class="sms-count" style="left: 150px">
+                  <li>
+                    <div>
+                      <em>단문문자</em>
+                      <span>단가 11원</span>
+                    </div>
+                    <em>5건</em>
+                  </li>
+                  <li>
+                    <div>
+                      <em>장문문자</em>
+                      <span>단가 33원</span>
+                    </div>
+                    <em>4건</em>
+                  </li>
+                  <li>
+                    <div>
+                      <em>이미지문자</em>
+                      <span>단가 88원</span>
+                    </div>
+                    <em>1건</em>
+                  </li>
+                </ul>
               </span>
               <span class="bind">
                 <button type="button" class="btn-secondary">3사 테스트 전송</button>
