@@ -270,6 +270,10 @@ figcaption {
   margin-top: 10px !important;
 }
 
+.mt-20 {
+  margin-top: 20px !important;
+}
+
 .my-30 {
   margin: 30px 0 !important;
 }
@@ -1479,7 +1483,7 @@ figcaption {
 .navigation .bind-left .logo {
   width: 122px;
   height: 28px;
-  margin-right: 198px;
+  margin-right: 158px;
   background: url("../images/logo_black.png") no-repeat 0 0;
   background-size: contain;
 }
@@ -2467,10 +2471,6 @@ footer {
 }
 
 /* 단/장문 */
-.sms-txt-container .sub-tit {
-  margin-left: 29px;
-}
-
 .sms-txt-container .understand-box {
   margin-bottom: 20px;
 }
@@ -2513,10 +2513,10 @@ footer {
 }
 
 .sms-txt-viwer {
-  width: 795px;
-  height: 931px;
+  width: 724px;
+  height: 805px;
   margin-top: 33px;
-  background: url("../images/phone_visual.png") no-repeat 0 0;
+  background: url("../images/phone_visual.png") no-repeat -11px 0;
   background-size: contain;
 }
 
@@ -2534,8 +2534,8 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 304px;
-  margin: 0 auto;
+  width: 288px;
+  margin-left: 177px;
   padding: 76px 0 47px;
 }
 
@@ -2555,8 +2555,8 @@ footer {
 
 .sms-txt-input {
   position: relative;
-  width: 304px;
-  margin: 0 auto;
+  width: 333px;
+  margin-left: 150px;
 }
 
 .sms-txt-input textarea {
@@ -2593,7 +2593,7 @@ footer {
 }
 
 .sms-txt-input .refer.bottom {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .sms-txt-input .refer-skyblue {
@@ -2628,6 +2628,8 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 5px 6px;
+  padding: 15px 15px 0;
+  border-top: 3px solid #f1f2f4;
 }
 
 .sms-txt-input .btn-group-function button {
@@ -2653,7 +2655,7 @@ footer {
 }
 
 .sms-txt-write {
-  width: 454px;
+  width: 476px;
   padding-top: 15px;
 }
 
@@ -2701,8 +2703,49 @@ footer {
   width: 100%;
 }
 
+.sms-txt-write .user-form-choice .bind-parent1,
+.sms-txt-write .user-form-choice .bind-parent2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sms-txt-write .user-form-choice .bind-parent1 > i,
+.sms-txt-write .user-form-choice .bind-parent2 > i {
+  margin: 0 20px;
+  color: #cccfd9;
+}
+
+.sms-txt-write .user-form-choice .bind-parent1 > .bind,
+.sms-txt-write .user-form-choice .bind-parent2 > .bind {
+  margin-top: 0;
+}
+
+.sms-txt-write .user-form-choice .bind-parent2 {
+  gap: 0 4px;
+}
+
+.sms-txt-write .user-form-choice .bind-parent2 .radio-chk-display .txt {
+  min-width: 72px;
+}
+
+.sms-txt-write .user-form-choice .bind-parent2 > .bind {
+  gap: 0 4px;
+}
+
 .sms-txt-write .user-form-choice .radio-chk-display .txt {
-  min-width: 100px;
+  min-width: 102px;
+  line-height: 44px;
 }
 
 .sms-txt-write .user-form-choice .select-default select {
@@ -2840,13 +2883,24 @@ footer {
   background-size: contain;
 }
 
+.merge-send-container .sms-result .sms-txt-viwer .sms-txt-viwer-header {
+  width: 288px;
+  margin: 0 0 0 50px;
+  padding: 66px 0 18px;
+}
+
+.merge-send-container .sms-result .sms-txt-viwer .sms-txt-input {
+  margin: 0 auto;
+}
+
 .merge-send-container .sms-result .sms-txt-viwer.left .sms-txt-input textarea {
-  height: 448px;
+  height: 521px;
   padding-top: 12px;
 }
 
 .merge-send-container .sms-result .sms-txt-viwer.right .sms-txt-input textarea {
-  height: 536px;
+  height: 564px;
+  padding-top: 12px;
 }
 
 .merge-send-container .sms-result .sms-txt-viwer.right .sms-txt-input .btn-group-function button {
@@ -2914,7 +2968,7 @@ footer {
 }
 
 .sms-result.sms-img .img-area {
-  margin-top: 0;
+  margin-top: 16px;
 }
 
 .sms-result.sms-img .img-area::after {
@@ -2922,20 +2976,25 @@ footer {
 }
 
 .sms-result.sms-img div.sms-txt-input textarea {
-  height: 427px;
+  height: 467px;
   padding-top: 12px;
 }
 
 .sms-result .sms-txt-viwer {
   width: 378px;
   height: 766px;
-  margin-left: 38px;
   background: url("../images/phone_visual2.png") no-repeat 0 0;
   background-size: contain;
 }
 
 .sms-result .sms-txt-viwer-header {
-  padding: 68px 0 55px;
+  width: 288px;
+  margin: 0 0 0 50px;
+  padding: 66px 0 18px;
+}
+
+.sms-result .sms-txt-viwer .sms-txt-input {
+  margin: 0 auto;
 }
 
 .sms-result .sms-txt-viwer .sms-txt-input textarea {

@@ -18,7 +18,8 @@
 
         <aside class="quick-menu" include-html="/v2/include/quickmenu.html"></aside>
 
-        <main class="sub-container type2">
+        <!-- 230330 type2 클래스 삭제 -->
+        <main class="sub-container">
           <!-- 230219 sms-img 클래스 추가 -->
           <div class="sms-txt-container sms-img">
             <h3 class="sub-tit">이미지문자</h3>
@@ -245,21 +246,30 @@
 
                 <div class="user-form-choice">
                   <em class="tit">분할전송</em>
-                  <label class="radio-chk-display">
-                    <input type="radio" name="divide" data-ui="divide-unused" />
-                    <span class="txt">미사용</span>
-                  </label>
-                  <div class="bind">
+                  <!-- 230330 
+                    * bind-parent1 DIV 추가
+                    * input-default의 인라인 style 너비 수정
+                    * <i>|</i> 추가
+                  -->
+                  <div class="bind-parent1">
                     <label class="radio-chk-display">
-                      <input type="radio" name="divide" data-ui="divide-used" />
-                      <span class="txt">사용</span>
+                      <input type="radio" name="divide" data-ui="divide-unused" />
+                      <span class="txt">미사용</span>
                     </label>
-                    <input type="number" class="input-default txt-center" style="width: 90px" />
-                    <span class="space">건씩</span>
-                    <input type="number" class="input-default txt-center" style="width: 90px" />
-                    <span class="space">분 간격</span>
+                    <i>|</i>
+                    <div class="bind">
+                      <label class="radio-chk-display">
+                        <input type="radio" name="divide" data-ui="divide-used" />
+                        <span class="txt">사용</span>
+                      </label>
+                      <input type="number" class="input-default txt-center" style="width: 58px" />
+                      <span class="space">건씩</span>
+                      <input type="number" class="input-default txt-center" style="width: 58px" />
+                      <span class="space">분 간격</span>
+                    </div>
+                    <!-- //bind -->
                   </div>
-                  <!-- //bind -->
+                  <!-- //bind-parent1 -->
                 </div>
                 <!-- //user-form-choice -->
 
@@ -267,35 +277,41 @@
 
                 <div class="user-form-choice">
                   <em class="tit">전송시간</em>
-                  <label class="radio-chk-display">
-                    <input type="radio" name="time" data-ui="time-used" />
-                    <span class="txt">즉시</span>
-                  </label>
-                  <div class="bind">
+                  <!-- 230330 
+                    * bind-parent2 DIV 추가
+                    * select-default의 인라인 style 너비 수정
+                  -->
+                  <div class="bind-parent2">
                     <label class="radio-chk-display">
-                      <input type="radio" name="time" data-ui="time-unused" />
-                      <span class="txt">예약</span>
+                      <input type="radio" name="time" data-ui="time-used" />
+                      <span class="txt">즉시</span>
                     </label>
-                    <input type="date" class="input-default date" style="width: 146px" />
-                    <!-- 230202 셀렉트 박스로 변경 -->
-                    <span class="select-default" style="width: 90px">
-                      <select>
-                        <option>오전9</option>
-                        <option>오전10</option>
-                        <option>오전11</option>
-                      </select>
-                    </span>
-                    <span class="space">시</span>
-                    <span class="select-default" style="width: 59px">
-                      <select>
-                        <option>00</option>
-                        <option>10</option>
-                        <option>20</option>
-                      </select>
-                    </span>
-                    <span class="space">분</span>
+                    <div class="bind">
+                      <label class="radio-chk-display">
+                        <input type="radio" name="time" data-ui="time-unused" />
+                        <span class="txt">예약</span>
+                      </label>
+                      <input type="date" class="input-default date" style="width: 146px" />
+                      <span class="select-default" style="width: 95px">
+                        <select>
+                          <option>오전9시</option>
+                          <option>오전10시</option>
+                          <option>오전11시</option>
+                        </select>
+                      </span>
+                      <!-- <span class="space">시</span> -->
+                      <span class="select-default" style="width: 66px">
+                        <select>
+                          <option>00분</option>
+                          <option>10분</option>
+                          <option>20분</option>
+                        </select>
+                      </span>
+                      <!-- <span class="space">분</span> -->
+                    </div>
+                    <!-- //bind -->
                   </div>
-                  <!-- //bind -->
+                  <!-- //bind-parent2 -->
                 </div>
                 <!-- //user-form-choice -->
 

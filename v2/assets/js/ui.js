@@ -48,8 +48,11 @@ const cmmnUi = {
       isChked($('[data-ui="time-unused"]'), $('[data-ui="time-used"]'));
     });
 
-    // 디폴트 체크 값 설정
-    $('.user-form-choice > .radio-chk-display input').prop('checked', true).trigger('change');
+    // 디폴트 체크 값 설정 : 230330 수정
+    var labelEl = `.user-form-choice > .radio-chk-display input,
+      .user-form-choice .bind-parent1 > .radio-chk-display input,
+      .user-form-choice .bind-parent2 > .radio-chk-display input`;
+    $(labelEl).prop('checked', true).trigger('change');
 
     function isChked($targetEl, $anotherEl) {
       if ($targetEl.is(':checked')) {
